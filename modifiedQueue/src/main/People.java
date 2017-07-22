@@ -4,10 +4,9 @@ public class People {
 	public static int number_made = 0;
 	private static final int STARTING_ID = 1000;
 	private String name;
-	private int id; // unique for each person
+	private final int id; // unique for each person
 	private int impatience_total;
 	private int impatience_level;
-	
 	private int VIP;
 	//constructor
 	public People(String name){ //constructor

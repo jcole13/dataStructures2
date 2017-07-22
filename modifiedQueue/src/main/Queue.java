@@ -97,7 +97,12 @@ public class Queue<E> {
 		return temp.getData();
 		
 	}
-	
+	public E leaveFromMiddle(int i) {
+		Node<E>on=front;
+		for(int j=0;j<i;j++)
+			on=on.getNext();
+		return on.getData();
+	}
 	public Node<E> findByID(int id) {
 		return null;
 	}
