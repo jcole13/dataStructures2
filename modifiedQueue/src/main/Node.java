@@ -1,8 +1,8 @@
 package main;
 
 public class Node<E> {
-	Node<E> next, previous;
-	E data;
+	private Node<E> next, previous;
+	private E data;
 	
 	public Node(E e) {
 		next = null;
