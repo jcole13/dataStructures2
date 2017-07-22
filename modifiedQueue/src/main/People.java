@@ -1,7 +1,5 @@
 package main;
 
-import java.util.Random;
-
 public class People {
 	//instance variables
 	public static int number_made = 0;
@@ -10,7 +8,7 @@ public class People {
 	private final int id; // unique for each person
 	private int impatience_total;
 	private int impatience_level;
-	private int VIP;
+	private int VIP;//the lower the vip level the better
 	public People() {//65-90,97-122
 		this("anon");
 	}
@@ -31,6 +29,9 @@ public class People {
 		this.impatience_total = impatience;
 		this.VIP = VIP;
 		this.impatience_level = 0;
+	}
+	public People(String name, int impatience) {
+		this(name,impatience,Integer.MAX_VALUE);
 	}
 	//setters and getters
 	public String getName() {
@@ -65,7 +66,8 @@ public class People {
 	@Override
 	public String toString(){ //list facts about a person
 		String temp = "Name: " + this.name;
-		temp += "\n" + "ID: " + this.id;
+		temp+=" wait:"+(impatience_total-impatience_level);
+		temp += "\t" + "ID: " + this.id;
 		return temp;
 	} //end toString
 

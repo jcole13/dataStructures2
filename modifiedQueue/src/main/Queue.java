@@ -58,25 +58,28 @@ public class Queue<E> {
 	public Object look() {//this peeks at the front of the queue
 		return front;
 	} //end look
-	public void insertVIP(E e) throws QueueEmptyException {
-		if(length < ((People) e).getVIPStatus()) { //casted
+	public void insertVIP(E e) throws QueueEmptyException {//takes more overhead than just regularly joining
+		if(length <= ((People) e).getVIPStatus()) { //casted
 			join(e);
 			return;
 		}
 		Node<E> i = front;
 		int j = 0;
+		System.out.println(this);
+		outer:
 		while(i != null) {
-			if(j++ == ((People) e).getVIPStatus()) { //cast
+			if(j++ >= ((People) e).getVIPStatus()) { //cast
 				Node<E> temp = new Node<E>(e);
 				temp.setNext(i.getNext());
 				i.getNext().setPrevious(temp);
 				i.setNext(temp);
 				temp.setPrevious(i);
 				length++;
-				break;
+				break outer;
 			}
 			i = i.getNext();
 		}
+		this.incrementImpatience();
 	} // end insertVIP
 	public E leaveFromMiddle(Node<E> n) throws QueueEmptyException {
 		//increment impatience level when adding anything
@@ -90,18 +93,13 @@ public class Queue<E> {
 			temp.getNext().setPrevious(temp.getPrevious());
 		}
 		else {
+			System.out.println("leaves while in front of line");
 			leave();
 		}
 		
 		length--;
 		return temp.getData();
 		
-	}
-	public E leaveFromMiddle(int i) {
-		Node<E>on=front;
-		for(int j=0;j<i;j++)
-			on=on.getNext();
-		return on.getData();
 	}
 	public Node<E> findByID(int id) {
 		return null;
@@ -115,13 +113,14 @@ public class Queue<E> {
 		while(i != null) {
 			
 			((People) i.getData()).plusImpatience(); //cast
-			System.out.println("Before leave: " +((People) i.getData()).checkImpatience());
 			if(((People) i.getData()).checkImpatience()) { //cast
-				System.out.println("Impatient person leaving");
+				System.out.println("Impatient person leaving\n"+i);
 				leaveFromMiddle(i);
 			}
 			i = i.getNext();
+			
 		}
+		
 	} //end incrementImpatience
 	public void decrementImpatience() {
 		Node<E> i = front;

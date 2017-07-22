@@ -25,5 +25,7 @@ public class Node<E> {
 	public void setPrevious(Node<E> n) {
 		previous = n;
 	}
-	
+	public String toString() {
+		return data.toString();
+	}
 }
