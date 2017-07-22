@@ -31,7 +31,7 @@ public class LList {
 	}
 	/**
 	 * 
-	 * @param object which to add to the back of the list
+	 * @param //object which to add to the back of the list
 	 */
 	public void append(Object p){
 		if(isEmpty()) {//checks if the list is empty to avoid a nullpointer
@@ -51,7 +51,7 @@ public class LList {
 
 	}
 	/**Overloaded method
-	 * @param it needs a graphnode, but it is for a specific usage of the adjacency list
+	 * @param //it needs a graphnode, but it is for a specific usage of the adjacency list
 	 * @return returns a node within the graphnode, or a null if it cannot be found
 	 */
 	public Node adjfind(GraphNode n) { //use for adjacency list
@@ -63,7 +63,7 @@ public class LList {
 		return null;
 	}
 	/**Overloaded method
-	 * @param String to find the specific GraphNode
+	 * @param //String to find the specific GraphNode
 	 * @return a GraphNode with the name
 	 */
 	public GraphNode gnFind(String s) {

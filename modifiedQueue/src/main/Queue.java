@@ -16,7 +16,7 @@ public class Queue<E> {
 	} //end constructor
 	/**
 	 * 
-	 * @param an object which you wish to store in a node
+	 * @param //an object which you wish to store in a node
 	 * @throws QueueEmptyException 
 	 */
 	public void join(E e) throws QueueEmptyException{
@@ -51,6 +51,7 @@ public class Queue<E> {
 		}
 		front = front.getNext();
 		front.setPrevious(null);
+		System.out.println("Someone has left");
 		length--; //decrement length if leave
 		decrementImpatience();//if people leave, their impatience decreases
 		return temp;
@@ -93,8 +94,7 @@ public class Queue<E> {
 			temp.getNext().setPrevious(temp.getPrevious());
 		}
 		else {
-			System.out.println("leaves while in front of line");
-			leave();
+			System.out.println("Why would the frist person in line leave...");
 		}
 		
 		length--;
@@ -110,12 +110,16 @@ public class Queue<E> {
 	
 	public void incrementImpatience() throws QueueEmptyException {
 		Node<E> i = front;
-		while(i != null) {
-			
+		boolean removed = false;
+		while(i != null && !removed) {
+
+			System.out.println("Entering the loop");
 			((People) i.getData()).plusImpatience(); //cast
 			if(((People) i.getData()).checkImpatience()) { //cast
 				System.out.println("Impatient person leaving\n"+i);
 				leaveFromMiddle(i);
+				removed = true;
+				//counter++;
 			}
 			i = i.getNext();
 			
