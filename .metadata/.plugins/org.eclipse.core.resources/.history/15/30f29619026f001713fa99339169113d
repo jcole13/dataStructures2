@@ -1,0 +1,146 @@
+package main;
+
+public class Queue<E> {
+	//instance variables
+	private Node<E> front, back;
+	private int length;
+	/**
+	 * these are the constructors
+	 * @param size
+	 */
+	public Queue(int size) {
+		length = size;
+	} //end constructor
+	public Queue() {
+		length = 0; 
+	} //end constructor
+	/**
+	 * 
+	 * @param an object which you wish to store in a node
+	 */
+	public void join(E e){
+		Node<E> temp = new Node<E>(e);
+		if(isEmpty()){//tests if the queue is null
+			back = temp;
+			front = back; 
+			length++; //philosophically it feels better
+		} //end if
+		else{
+			back.setNext(temp);
+			temp.setPrevious(back);
+			back = back.getNext();
+			incrementImpatience();
+			length++;
+		} //end else
+	} //end join
+	/**
+	 * 
+	 * @return the front of the queue
+	 * @throws QueueEmptyException 
+	 */
+	public E leave() throws QueueEmptyException { // assumes unlimited data
+		//System.out.println("!");
+		if (isEmpty())
+			throw new QueueEmptyException();// TODO make a new Exception
+		E temp = null;
+		try {//tests if there is a null pointer, which would be a critical error
+		temp = front.getData();
+		}catch(NullPointerException npe) {
+			System.out.println("Null Pointer");
+		}
+		front = front.getNext();
+		front.setPrevious(null);
+		length--; //decrement length if leave
+		decrementImpatience();//if people leave, their impatience decreases
+		return temp;
+	} //end leave
+	public Object look() {//this peeks at the front of the queue
+		return front;
+	} //end look
+	public void insertVIP(E e) {
+		if(length < ((People) e).getVIPStatus()) { //casted
+			join(e);
+			return;
+		}
+		Node<E> i = front;
+		int j = 0;
+		while(i != null) {
+			if(j++ == ((People) e).getVIPStatus()) {
+				Node<E> temp = new Node<E>(e);
+				temp.setNext(i.getNext());
+				i.getNext().setPrevious(temp);
+				i.setNext(temp);
+				temp.setPrevious(i);
+				length++;
+				break;
+			}
+			i = i.getNext();
+		}
+	} // end insertVIP
+	public E leaveFromMiddle(Node<E> n) throws QueueEmptyException {
+		//increment impatience level when adding anything
+		//in increment, add a condition to leave?
+		if (isEmpty())
+			throw new QueueEmptyException();// TODO make a new Exception
+		E temp = null;
+		
+		return null;
+	}
+	
+	public Node<E> findByID(int id) {
+		return null;
+	}
+	public Node<E> findByName(int id) {
+		return null;
+	}
+	
+	public void incrementImpatience() {
+		Node<E> i = front;
+		while(i != null) {
+			i.getData().plusImpatience();
+			if(i.getData().checkImpatience()) {
+				leaveFromMiddle(i);
+			}
+		}
+	} //end incrementImpatience
+	public void decrementImpatience() {
+		Node<E> i = front;
+		while(i != null) {
+			i.getData().minusImpatience();
+		}
+	} //end incrementImpatience
+	
+	public Node<E> adjfind(Node<E> n) { 
+		Node<E> temp = front;
+		do{
+			if() return i;//where to break off
+			i = i.getNext();
+		}while((i.getData() != null) && !(((LList) i.getData()).equals(n)));
+		return null;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public boolean isEmpty() {return length == 0;} //end isempty
+	/**@return the top queue in the form of a string
+	 * 
+	 */
+	@Override
+	public String toString(){
+		String temp = "[";
+		Node<E> on = front;
+		while(on != null){
+			temp += " " + on.getData()+",";
+			on = on.getNext();
+		} //end while
+		return temp.substring(0, temp.length()-1) + "]";
+	}//end toString
+
+} //end class

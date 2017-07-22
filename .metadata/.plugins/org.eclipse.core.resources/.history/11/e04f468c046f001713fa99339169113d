@@ -1,0 +1,7 @@
+package main;
+
+public class Tester {
+	
+	Queue<People> queue = new Queue<People>();
+
+}
