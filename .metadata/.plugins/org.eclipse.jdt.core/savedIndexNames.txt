@@ -1,0 +1,3 @@
+INDEX VERSION 1.130+C:\Users\Jared Cole\Documents\GitHub\dataStructures2\.metadata\.plugins\org.eclipse.jdt.core
+3498797796.index
+756656402.index
