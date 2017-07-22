@@ -101,7 +101,7 @@ public class Queue<E> {
 		return temp.getData();
 		
 	}
-	public Node<E> findByID(int id) {//returns the node
+	public Node<E> findByID(int id) {
 		Node<E> i=front;
 		while(i!=null) {
 			if(((People)i.getData()).getId()==id)return i;
@@ -109,7 +109,7 @@ public class Queue<E> {
 		}
 		return null;
 	}
-	public Node<E> findByName(String name) {//returns the node
+	public Node<E> findByName(String name) {
 		Node<E> i=front;
 		while(i!=null) {
 			if(((People)i.getData()).getName()==name)return i;
