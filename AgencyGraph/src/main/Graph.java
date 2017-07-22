@@ -25,7 +25,7 @@ public class Graph {
 		return adjList;
 	}
 	/**This method uses stacks and searches deep
-	 * @param Graphnode to search for from the first input
+	 * @param //Graphnode to search for from the first input
 	 * @return true or false based on whether it could be found
 	 */
 	public boolean Depth(GraphNode n) {
@@ -57,7 +57,7 @@ public class Graph {
 		return false;//ah well i give up
 	}
 	/**This method uses queues and searches wide
-	 * @param GraphNode to search for
+	 * @param //GraphNode to search for
 	 * @return true or false to answer
 	 */
 	public boolean Breadth(GraphNode n) {

@@ -120,15 +120,15 @@ public class Queue<E> {
 	
 	public void incrementImpatience() throws QueueEmptyException {
 		Node<E> i = front;
-		boolean removed = false;
-		while(i != null && !removed) {
+		//boolean removed = false;
+		while(i != null) {
 
 			System.out.println("Entering the loop");
 			((People) i.getData()).plusImpatience(); //cast
 			if(((People) i.getData()).checkImpatience()) { //cast
 				System.out.println("Impatient person leaving\n"+i);
 				leaveFromMiddle(i);
-				removed = true;
+				//removed = true;
 				//counter++;
 			}
 			i = i.getNext();
