@@ -14,7 +14,12 @@ public class People {
 	}
 	//constructor
 	public People(String name){ //constructor
-		this(name,5,Integer.MAX_VALUE);
+		this.name = name;
+		this.id = STARTING_ID + number_made;
+		number_made++; //incrementing this static variable
+		impatience_total = 5;
+		impatience_level = 0;
+		VIP=Integer.MAX_VALUE;
 
 	} //end constructor
 	
