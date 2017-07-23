@@ -9,7 +9,8 @@ public class UI {
 	public void UserInput() {
 		//initiate the graph
 		Graph g = new Graph();
-		//These are the the initiation for all the nodes. 
+		//These are the the initiation for all the nodes.
+		GraphNode Agency = new GraphNode(new People("Agency"));
 		GraphNode A = new GraphNode(new People("A"));
 		GraphNode B = new GraphNode(new People("B"));
 		GraphNode C = new GraphNode(new People("C"));
@@ -37,6 +38,7 @@ public class UI {
 		GraphNode Y = new GraphNode(new People("Y"));
 		GraphNode Z = new GraphNode(new People("Z"));
 		//these add all of the nodes to the graph
+		g.addNode(Agency);
 		g.addNode(A);
 		g.addNode(B);
 		g.addNode(C);
@@ -64,6 +66,7 @@ public class UI {
 		g.addNode(Y);
 		g.addNode(Z);
 		//these add random nodes. starting from a
+		g.addEdge(Agency, A);
 		g.addEdge(A, B);
 		g.addEdge(A, C);
 		g.addEdge(C, D);
@@ -103,7 +106,14 @@ public class UI {
 		g.addEdge(S, T);
 		g.addEdge(K, U);
 		//taking in the information from the user
-		InputStreamReader nab = new InputStreamReader(System.in);
+
+		Node i = g.getAllNodes().getFirst();
+		while(i != null){
+			System.out.println(((GraphNode)i.getData()).getPerson());
+			i = i.getNext();
+		}
+
+		/*InputStreamReader nab = new InputStreamReader(System.in);
 		BufferedReader grab = new BufferedReader(nab);
 		//prompt to ask user what type of search that one would like to search for
 		System.out.println("Nodes(People) in the graph are labelled A - Z for convenience");//it truly is
@@ -143,7 +153,7 @@ public class UI {
 			}catch(NullPointerException npe) {
 				System.out.println("Please enter a letter");//this means that the user has attempted to troll us.
 			}
-		}
+		}*/
 	}//end userinput
 
 }//end class

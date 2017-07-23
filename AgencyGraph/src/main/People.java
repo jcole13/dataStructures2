@@ -12,11 +12,10 @@ public class People {
 
 	//constructor
 	public People(String name){ //constructor
-		Random rn = new Random();
 		this.name = name;
 		this.id = STARTING_ID + number_made;
 		number_made++; //incrementing this static variable
-		karma = 1; //change this
+		karma = 1 + (int)(Math.random() * 5);
 
 	}
 	//setters and getters
@@ -29,16 +28,18 @@ public class People {
 	public int getId() {
 		return id;
 	}
+
+
 	@Override
 	public String toString(){ //list facts about a person
 		String temp = "Name: " + this.name;
 		temp += "\n" + "ID: " + this.id;
+		temp += "\n + Karma: " + this.karma;
 		return temp;
 	}
 	
 	public People(){
 		this("Anon");
 	}
-
 
 }

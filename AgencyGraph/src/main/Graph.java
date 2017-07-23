@@ -21,6 +21,9 @@ public class Graph {
 		Node found = adjList.adjfind(f);
 		((LList) found.getData()).append(t);
 	}
+	public LList getAllNodes(){
+		return allNodes;
+	}
 	public LList getAdjacency() {
 		return adjList;
 	}
@@ -28,34 +31,7 @@ public class Graph {
 	 * @param //Graphnode to search for from the first input
 	 * @return true or false based on whether it could be found
 	 */
-	public boolean Depth(GraphNode n) {
-		Stack stack = new Stack();//initiate a new stack
-		GraphNode first = ((LList) adjList.getFirst().getData()).getLabel();
-		
-		stack.join(first);//adds to the stack to start the chain
-		first.setVisited(true);
-		
-		while(!stack.isEmpty()) {
-			GraphNode g = (GraphNode) stack.leave();//takes off the top of the stack
-			System.out.println("Leave: " + g);
-			if(g.equals(n)) {
-				System.out.println("Found " + g);//breaks out of the program
-				return true;
-			}
-			Node node = adjList.adjfind(g);//find the things that are adjacent to the stack
-			Node gn = ((LList) node.getData()).getFirst();//finds the things in the llist
-			for(int j = 0; j < ((LList) node.getData()).getLength(); j++) {
-				if(!((GraphNode) gn.getData()).getVisited()) {//incase of already used
-					stack.join(((GraphNode)gn.getData()));//adds to the stack that everything next to the node just removed
-					System.out.println("Join: " + (GraphNode) gn.getData());
-					System.out.println("After Join: " + stack);
-					((GraphNode) gn.getData()).setVisited(true);//so we dont revisit
-				}
-				gn = gn.getNext();
-			}
-		}
-		return false;//ah well i give up
-	}
+
 	/**This method uses queues and searches wide
 	 * @param //GraphNode to search for
 	 * @return true or false to answer

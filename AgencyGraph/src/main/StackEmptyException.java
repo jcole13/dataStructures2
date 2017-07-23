@@ -7,7 +7,7 @@ public class StackEmptyException extends RuntimeException{//this exception gets 
 	private static final long serialVersionUID = 2685788240441941748L;
 
 	public StackEmptyException(){//default constructor
-		super("Stack is empty");
+		super("Empty");
 	}
 
 }
