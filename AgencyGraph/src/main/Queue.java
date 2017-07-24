@@ -16,7 +16,7 @@ public class Queue {
 	}
 	/**
 	 * 
-	 * @param an object which you wish to store in a node
+	 * @param //an object which you wish to store in a node
 	 */
 	public void join(Object p){
 		Node temp = new Node(p);

@@ -64,5 +64,14 @@ public class Graph {
 			}
 		}
 		return false;//givin up
-	}	
+	}
+	public void findPath(){
+		//starts at the agency and finds the most people it can
+		//connect with using each person's karma points
+		//be sure to check if too many karma points for a person,
+		//of if there are too many people for karma points
+		//we dont want the null pointer exception
+		//maybe use a LList of LLists to store everything, or a matrix
+		//might be better actually, will ask professor tomorrow
+	}
 }

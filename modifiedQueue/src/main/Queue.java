@@ -49,11 +49,13 @@ public class Queue<E> {
 		}catch(NullPointerException npe) {
 			System.out.println("Null Pointer");
 		}
+		System.out.println("HERE IS THE PERSON WHO LEAVES!!! " + temp);
 		front = front.getNext();
-		front.setPrevious(null);
+		//front.setPrevious(null);
 		System.out.println("Someone has left");
 		length--; //decrement length if leave
 		decrementImpatience();//if people leave, their impatience decreases
+		//System.out.println("HERE IS THE PERSON WHO LEAVES!!! " + temp);
 		return temp;
 	} //end leave
 	public Object look() {//this peeks at the front of the queue
@@ -92,12 +94,13 @@ public class Queue<E> {
 			System.out.println("Not first");
 			temp.getPrevious().setNext(temp.getNext());
 			temp.getNext().setPrevious(temp.getPrevious());
+			length--;
 		}
 		else {
 			System.out.println("Why would the frist person in line leave...");
 		}
 		
-		length--;
+
 		return temp.getData();
 		
 	}
