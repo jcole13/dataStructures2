@@ -52,8 +52,9 @@ public class Graph {
 			//LList currentShortenedNodes = chooser(currentnodes,current.getPerson().getKarma());
 			//System.out.println("Current Nodes: " + currentnodes);
 			//System.out.println("Chooser Nodes: " + currentShortenedNodes);
-			System.out.println(currentnodes);
+			System.out.println("Before sort" + currentnodes);
 			currentnodes.sort();
+			System.out.println("After sort" + currentnodes);
 			Node a = currentnodes.getFirst();
 			System.out.println(a);
 			int i = 0;

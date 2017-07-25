@@ -101,7 +101,7 @@ public class LList {
 		for (ListIterator i = max; !i.atEnd(); i.plusplus()) {
 			max = i;
 			for (ListIterator j = i.getNext(); !j.atEnd(); j.plusplus()) {
-				//System.out.println("J: " + j);
+				System.out.println("J: " + j);
 				//System.out.println("Here is the data: " + j.getData());
 				//System.out.println("Here is the max: " + max.getData());
 				if (((GraphNode) j.getData()).greaterThan((GraphNode) max.getData())) {

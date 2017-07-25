@@ -25,7 +25,7 @@ public class ListIterator {
     }
 
     public boolean atEnd() {
-        return this.myNode.getNext() == null;
+        return this.myNode == null;
     }
 
     public ListIterator getNext() {
