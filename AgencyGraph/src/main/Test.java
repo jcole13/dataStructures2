@@ -23,7 +23,7 @@ public class Test {
 		g.addEdge(E, F);
 		g.addEdge(D, F);
 		//g.addEdge(B, D);
-		g.Breadth(D);
+		//g.Breadth(D);
 		//System.out.println(g.allEdges);
 		//g.adjList.adjfind(C);
 		

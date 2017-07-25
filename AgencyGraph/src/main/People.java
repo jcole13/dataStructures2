@@ -9,6 +9,7 @@ public class People {
 	private String name;
 	private int id; // unique for each person
 	private int karma;
+	private int worth;
 
 	//constructor
 	public People(String name){ //constructor
@@ -16,6 +17,7 @@ public class People {
 		this.id = STARTING_ID + number_made;
 		number_made++; //incrementing this static variable
 		karma = 1 + (int)(Math.random() * 5);
+		worth = 0;
 
 	}
 	//setters and getters
@@ -28,6 +30,11 @@ public class People {
 	public int getId() {
 		return id;
 	}
+	public int getKarma(){return karma;}
+	public void setKarma(int w){karma = w;}
+	public int getWorth(){return worth;}
+	public void incrementkarma(){
+		karma++;}
 
 
 	@Override
