@@ -31,6 +31,7 @@ public class Node {
 	public Object getData() {
 		return data;
 	}
+	public void setData(Object o){data = o;}
 	@Override
 	public String toString() {
 		return data.toString();

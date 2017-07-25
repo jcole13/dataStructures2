@@ -31,6 +31,9 @@ public class GraphNode {
 	public boolean equals(GraphNode n) {
 		return this.label.getName().equals(n.getPerson().getName());
 	}
+	public boolean greaterThan(GraphNode n){
+		return this.getPerson().getKarma() > n.getPerson().getKarma();
+	}
 	@Override
 	public String toString() {
 		return label.getName();

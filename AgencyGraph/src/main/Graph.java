@@ -28,78 +28,7 @@ public class Graph {
 		return adjList;
 	}
 
-	/*public void findMostNodes() {
-		//initiate a new Queue
-		Queue queue = new Queue();
-		GraphNode agency = ((LList) adjList.getFirst().getData()).getLabel();//agency
-		queue.join(agency);
-		agency.setVisited(true);
-		agency.setSettled(true);
-		LList settledNodes = new LList();
 
-		while(!queue.isEmpty()){
-			GraphNode g = (GraphNode) queue.leave();
-			Node node = adjList.adjfind(g);
-			Node gn = ((LList) node.getData()).getFirst();//first node in second level LList
-			LList currentConnections = ((LList) node.getData());
-			if(currentConnections.getLength() == 1){
-				settledNodes.append(((LList) node.getData()).getLabel());
-				((LList) node.getData()).getLabel().setSettled(true);
-				queue.join((GraphNode)currentConnections.getFirst().getData());
-				//settledNodes.append(currentConnections.getFirst().getData());
-				//((GraphNode) currentConnections.getFirst().getData()).setSettled(true);
-			}
-			else if(currentConnections.getLength() < 1){
-				System.out.println("No Connections to this node");
-				settledNodes.append(((LList) node.getData()).getLabel());
-				((LList) node.getData()).getLabel().setSettled(true);
-			}
-			else {
-				for (int i = 0; i < currentConnections.getLength(); i++) {
-					if (((GraphNode) gn.getData()).getPerson().getKarma() > 0) {
-						if(!((GraphNode) gn.getData()).getVisited()) {
-							queue.join(gn.getData());
-							((GraphNode) gn.getData()).setVisited(true);
-						}
-
-					}
-
-				}
-			}
-		}//end while
-		//definition of cluster, a lot of interconnected nodes
-
-		Node i = settledNodes.getFirst();
-		while(i != null){
-			addEdge(agency, (GraphNode)i.getData());
-		}
-		/*GraphNode first = ((LList) adjList.getFirst().getData()).getLabel();
-		//start the queue with the start of the search
-		queue.join(first);
-		first.setVisited(true);
-		//goes to search
-		while(!queue.isEmpty()) {
-			GraphNode g = (GraphNode) queue.leave();//takes the top of the queue
-			System.out.println("Leave: " + g);
-			if(g.equals(n)) {//yay, the target was removed
-				System.out.println("Found: " + g);
-				return true;
-			}
-			Node node = adjList.adjfind(g);//find everything next to the node
-			Node gn = ((LList) node.getData()).getFirst();//get everything adjacent
-			int currentKarma = ((LList) node.getData()).getLabel().getPerson().getKarma();
-			for(int j = 0; j < ((LList) node.getData()).getLength(); j++) {
-				if(!((GraphNode) gn.getData()).getVisited()) {//skip a place
-					queue.join(((GraphNode)gn.getData()));
-					System.out.println("Join: " + (GraphNode) gn.getData());
-					System.out.println("After Joined: " + queue);
-					((GraphNode) gn.getData()).setVisited(true);//so there is no overlapping
-				}
-				gn = gn.getNext();
-			}
-		}
-		//return false;//givin up
-	}*/
 
 	public void findPath(){
 		Queue queue = new Queue();
@@ -119,7 +48,12 @@ public class Graph {
 		while(!queue.isEmpty()){
 			GraphNode current = (GraphNode)queue.leave();
 			System.out.println("Current" + current);
-			LList currentnodes = chooser((LList)adjList.adjfind(current).getData(),current.getPerson().getKarma());
+			LList currentnodes = (LList)adjList.adjfind(current).getData();
+			//LList currentShortenedNodes = chooser(currentnodes,current.getPerson().getKarma());
+			//System.out.println("Current Nodes: " + currentnodes);
+			//System.out.println("Chooser Nodes: " + currentShortenedNodes);
+			System.out.println(currentnodes);
+			currentnodes.sort();
 			Node a = currentnodes.getFirst();
 			System.out.println(a);
 			int i = 0;
@@ -140,26 +74,25 @@ public class Graph {
 
 
 	}
-	private LList chooser(LList llist, int karma){//sort by min(karma, connection length) should be from max to min
-		if(llist.getLength()<karma)return llist;
-		Node[] data=new Node[llist.getLength()];
+	/*private void reorganize(LList llist, int karma){//sort by min(karma, connection length) should be from max to min
+		if(llist.getLength()<karma)return;
+
+		Node first = llist.getFirst();
+		Node current = llist.getFirst();
+		while(first != null){
+			if()
+			current = current.getNext();
+		}
+
+
+		/*Node[] data=new Node[llist.getLength()];
 		Node temp=llist.getFirst();
 		for(int i=0;i<data.length;i++){
-			if(!((GraphNode)temp.getData()).getVisited()) {//no counting going back
 				data[i] = temp;
 				temp = temp.getNext();
-			}
-		}
-		int counter=data.length;//truncate the array of blank stuff
-		for(Node n:data){
-			if(n==null)counter--;
-		}
-		Node[] dtemp=new Node[counter];
-		for(int i=0;i<dtemp.length;i++){
-			dtemp[i]=data[i];
-		}
-		data=dtemp;
-		if(data.length>karma) {
+		}*/
+
+		/*if(data.length>karma) {
 			//sort
 			for (int i = 0; i < data.length - 1; i++) {
 				int max = i;
@@ -176,9 +109,9 @@ public class Graph {
 			}
 		}
 		LList ret=new LList();
-		for(int i=0;i<karma;i++){
+		for(int i=0;i<data.length;i++){
 			ret.append(data[i]);
 		}
 		return ret;
-	}
+	}*/
 } //end class
