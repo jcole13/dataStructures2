@@ -6,11 +6,8 @@ public class Queue<E> {
 	private int length;
 	/**
 	 * these are the constructors
-	 * @param size
+	 * @param
 	 */
-	public Queue(int size) {
-		length = size;
-	} //end constructor
 	public Queue() {
 		length = 0; 
 	} //end constructor
@@ -20,7 +17,7 @@ public class Queue<E> {
 	 * @throws QueueEmptyException 
 	 */
 	public void join(E e) throws QueueEmptyException{
-		Node<E> temp = new Node<E>(e);
+		Node<E> temp = new Node<>(e);
 		if(isEmpty()){//tests if the queue is null
 			back = temp;
 			front = back; 
@@ -58,8 +55,8 @@ public class Queue<E> {
 		//System.out.println("HERE IS THE PERSON WHO LEAVES!!! " + temp);
 		return temp;
 	} //end leave
-	public Object look() {//this peeks at the front of the queue
-		return front;
+	public E look() {//this peeks at the front of the queue
+		return front.getData();
 	} //end look
 	public void insertVIP(E e) throws QueueEmptyException {//takes more overhead than just regularly joining
 		if(length <= ((People) e).getVIPStatus()) { //casted
@@ -84,20 +81,19 @@ public class Queue<E> {
 		}
 		this.incrementImpatience();
 	} // end insertVIP
-	public E leaveFromMiddle(Node<E> n) throws QueueEmptyException {
+	private E leaveFromMiddle(Node<E> n) throws QueueEmptyException {
 		//increment impatience level when adding anything
 		//in increment, add a condition to leave?
 		if (isEmpty())
 			throw new QueueEmptyException();// TODO make a new Exception
 		Node<E> temp = n;
 		if(temp.getPrevious() != null) {
-			System.out.println("Not first");
 			temp.getPrevious().setNext(temp.getNext());
 			temp.getNext().setPrevious(temp.getPrevious());
 			length--;
 		}
 		else {
-			System.out.println("Why would the frist person in line leave...");
+			System.out.println("Why would the first person in line leave...");
 		}
 		
 
@@ -121,12 +117,10 @@ public class Queue<E> {
 		return null;
 	}
 	
-	public void incrementImpatience() throws QueueEmptyException {
+	private void incrementImpatience() throws QueueEmptyException {
 		Node<E> i = front;
 		//boolean removed = false;
 		while(i != null) {
-
-			System.out.println("Entering the loop");
 			((People) i.getData()).plusImpatience(); //cast
 			if(((People) i.getData()).checkImpatience()) { //cast
 				System.out.println("Impatient person leaving\n"+i);
@@ -139,14 +133,14 @@ public class Queue<E> {
 		}
 		
 	} //end incrementImpatience
-	public void decrementImpatience() {
+	private void decrementImpatience() {
 		Node<E> i = front;
 		while(i != null) {
 			((People) i.getData()).minusImpatience(); //cast
 		}
 	} //end incrementImpatience
 	
-	public Node<E> find(Node<E> n) { 
+	public Node<E> find(Node<E> n) {
 		Node<E> i = front;
 		do{
 			if(((People) i.getData()).getId() == ((People) n.getData()).getId()) return i;//where to break off //cast
@@ -155,6 +149,8 @@ public class Queue<E> {
 		return null;
 	}
 	public boolean isEmpty() {return length == 0;} //end isempty
+	public int getLength(){return length;
+	}
 	/**@return the top queue in the form of a string
 	 * 
 	 */

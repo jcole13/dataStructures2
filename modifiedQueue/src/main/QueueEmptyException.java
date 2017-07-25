@@ -1,6 +1,6 @@
 package main;
 
-public class QueueEmptyException extends Exception {
+public class QueueEmptyException extends RuntimeException {
 	/**
 	 * 
 	 */
