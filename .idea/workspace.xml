@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f0d6032-4465-4004-bcbe-06cce5989b4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="6f0d6032-4465-4004-bcbe-06cce5989b4a" name="Default" comment="" />
     <ignored path="dataStructures2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -184,10 +182,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-14" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
     <option name="width" value="1932" />
-    <option name="height" value="1092" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -670,12 +668,22 @@
       <workItem from="1500914725964" duration="12730000" />
 =======
       <workItem from="1500914844530" duration="186000" />
+<<<<<<< HEAD
+      <workItem from="1500916629011" duration="594000" />
+=======
       <workItem from="1500916629011" duration="170000" />
 >>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
+>>>>>>> 77def504f3864a09a6e60230e1fb72bf6de774c3
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="9820000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
+=======
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="21770000" />
   </component>
@@ -687,6 +695,7 @@
   <component name="ToolWindowManager">
     <frame x="-14" y="0" width="1932" height="1092" extended-state="1" />
 >>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
+>>>>>>> 77def504f3864a09a6e60230e1fb72bf6de774c3
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
