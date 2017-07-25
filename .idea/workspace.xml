@@ -21,12 +21,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+<<<<<<< HEAD
+      <file leaf-file-name="Queue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modifiedQueue/src/main/Queue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1089">
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+              <folding>
+                <element signature="e#249#250#0" expanded="true" />
+                <element signature="e#267#268#0" expanded="true" />
+              </folding>
+=======
       <file leaf-file-name="LList.class" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AgencyGraph/bin/main/LList.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1554">
               <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
               <folding />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
             </state>
           </provider>
         </entry>
@@ -44,28 +56,89 @@
       <file leaf-file-name="Runner.class" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AgencyGraph/bin/main/Runner.class">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="528">
+              <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+=======
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Graph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="142" column="172" selection-start-line="142" selection-start-column="172" selection-end-line="142" selection-end-column="172" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/GraphNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/UI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="106" column="24" selection-start-line="10" selection-start-column="8" selection-end-line="106" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="People.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/People.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="706">
+              <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+=======
       <file leaf-file-name="StackEmptyException.class" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AgencyGraph/bin/main/StackEmptyException.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="584">
+              <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+=======
       <file leaf-file-name="UI.class" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AgencyGraph/bin/main/UI.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1134">
               <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
               <folding />
             </state>
           </provider>
@@ -87,13 +160,19 @@
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/LList.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/GraphEdge.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/StackEmptyException.java" />
-        <option value="$PROJECT_DIR$/AgencyGraph/src/main/People.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/UI.java" />
-        <option value="$PROJECT_DIR$/AgencyGraph/src/main/Graph.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/Queue.java" />
         <option value="$PROJECT_DIR$/modifiedQueue/src/main/Tester.java" />
         <option value="$PROJECT_DIR$/modifiedQueue/src/main/Queue.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/AgencyGraph/src/main/GraphNode.java" />
+        <option value="$PROJECT_DIR$/AgencyGraph/src/main/Test.java" />
+        <option value="$PROJECT_DIR$/AgencyGraph/src/main/Runner.java" />
+        <option value="$PROJECT_DIR$/AgencyGraph/src/main/People.java" />
+        <option value="$PROJECT_DIR$/AgencyGraph/src/main/Graph.java" />
+=======
         <option value="$PROJECT_DIR$/AgencyGraph/bin/main/UI.class" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
       </list>
     </option>
   </component>
@@ -175,8 +254,13 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Application.Runner">
+    <configuration default="false" name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+=======
   <component name="RunManager" selected="Application.Tester">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="main.*" />
@@ -555,8 +639,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Tester" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Runner" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Runner" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -580,27 +664,53 @@
       <updated>1500756077988</updated>
       <workItem from="1500756081166" duration="2231000" />
       <workItem from="1500758346124" duration="6809000" />
+<<<<<<< HEAD
+      <workItem from="1500914725964" duration="12730000" />
+=======
       <workItem from="1500914844530" duration="186000" />
+<<<<<<< HEAD
       <workItem from="1500916629011" duration="594000" />
+=======
+      <workItem from="1500916629011" duration="170000" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
+>>>>>>> 77def504f3864a09a6e60230e1fb72bf6de774c3
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="9820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="21770000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-14" y="0" width="3204" height="1714" extended-state="1" />
+=======
+    <option name="totallyTimeSpent" value="9396000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-14" y="0" width="1932" height="1092" extended-state="1" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
+>>>>>>> 77def504f3864a09a6e60230e1fb72bf6de774c3
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3335584" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30519918" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -616,8 +726,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
+=======
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -674,16 +787,30 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AgencyGraph/bin/main/LList.class">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+=======
         <state relative-caret-position="1554">
           <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
           <folding />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AgencyGraph/bin/main/Graph.class">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="165">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+=======
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
           <folding />
         </state>
       </provider>
@@ -696,6 +823,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2211">
+          <caret line="71" column="57" selection-start-line="71" selection-start-column="57" selection-end-line="71" selection-end-column="57" />
+=======
     <entry file="file://$PROJECT_DIR$/AgencyGraph/bin/main/StackEmptyException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -708,10 +841,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/StackEmptyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+=======
     <entry file="file://$PROJECT_DIR$/modifiedQueue/src/main/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -744,13 +885,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/UI.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="5082">
+          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+          <folding />
+=======
         <state relative-caret-position="3234">
           <caret line="156" column="20" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
         </state>
       </provider>
     </entry>
@@ -846,29 +994,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/LList.java">
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/GraphEdge.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="264">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+=======
         <state relative-caret-position="291">
           <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Graph.java">
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/People.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="990">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#187#188#0" expanded="false" />
+            <element signature="e#207#208#0" expanded="false" />
+            <element signature="e#225#226#0" expanded="false" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#1073#1074#0" expanded="false" />
+            <element signature="e#1130#1131#0" expanded="false" />
+          </folding>
+=======
         <state relative-caret-position="640">
           <caret line="71" column="57" lean-forward="false" selection-start-line="71" selection-start-column="57" selection-end-line="71" selection-end-column="57" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modifiedQueue/src/main/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="96" column="78" selection-start-line="96" selection-start-column="78" selection-end-line="96" selection-end-column="78" />
+          <folding>
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modifiedQueue/src/main/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/LList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/GraphEdge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Stack.java" />
     <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/StackEmptyException.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="165">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+=======
         <state relative-caret-position="105">
           <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/UI.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="462">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#187#188#0" expanded="false" />
+            <element signature="e#207#208#0" expanded="false" />
+            <element signature="e#225#226#0" expanded="false" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#1073#1074#0" expanded="false" />
+            <element signature="e#1130#1131#0" expanded="false" />
+          </folding>
+=======
         <state relative-caret-position="703">
           <caret line="156" column="20" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
         </state>
@@ -879,6 +1108,7 @@
         <state relative-caret-position="1554">
           <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
           <folding />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
         </state>
       </provider>
     </entry>
@@ -908,8 +1138,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AgencyGraph/bin/main/Graph.class">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1089">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding>
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/GraphNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/LList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="106" column="24" selection-start-line="10" selection-start-column="8" selection-end-line="106" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/People.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="142" column="172" selection-start-line="142" selection-start-column="172" selection-end-line="142" selection-end-column="172" />
+=======
         <state relative-caret-position="-336">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> b4adf80011c3cb4a6c4e507b2cd24d59c88d3955
           <folding />
         </state>
       </provider>
