@@ -119,7 +119,7 @@ public class Graph {
 		while(!queue.isEmpty()){
 			GraphNode current = (GraphNode)queue.leave();
 			System.out.println("Current" + current);
-			LList currentnodes = (LList)adjList.adjfind(current).getData();
+			LList currentnodes = chooser((LList)adjList.adjfind(current).getData(),current.getPerson().getKarma());
 			Node a = currentnodes.getFirst();
 			System.out.println(a);
 			int i = 0;
@@ -141,7 +141,47 @@ public class Graph {
 
 	}
 	private LList chooser(LList llist, int karma){//first maybe the most connections, then maybe those that have not yet been added or those that have not yet been infected
+		if(llist.getLength()<karma)return llist;
+		Node[] data=new Node[llist.getLength()];
+		Node temp=llist.getFirst();
+		for(int i=0;i<data.length;i++){
+			if(!((GraphNode)temp.getData()).getVisited()) {//no counting going back
+				data[i] = temp;
+				temp = temp.getNext();
+			}
+		}
+		int counter=data.length;//truncate the array of blank stuff
+		for(Node n:data){
+			if(n==null)counter--;
+		}
+		Node[] dtemp=new Node[counter];
+		for(int i=0;i<dtemp.length;i++){
+			dtemp[i]=data[i];
+		}
+		data=dtemp;
+		if(data.length>karma) {
+			//sort
+			for (int i = 0; i < data.length - 1; i++) {
+				for (int j = i + 1; j < data.length; j++) {
+					//data[i]is the first thing
+					// data [j is the second
+					//just swap them if Math.min(j.karma,j.adjacent nodes)>Math.min(i.karma,i.adjacentNodes)
+				/*
+				use this bullshit code to easy swap:(this works, it swaps the memory addresses. If you dont want to use this, do whatever the fuck you want)
+				data[i]^=data[i]^data[j]
+				data[j]^=data[j]^data[i]
+				data[i]^=data[i]^data[j]
+				 */
+					//HELP ME WITH THE SWAP WTF IS THIS CASTING NONSENSE THIS IS WHY WE USE GENERICS OR ELSE YOU GET A MUMBLING AND RAGING MESS THAT IS NOT AT ALL HAPPY WHICH ENDS UP LOOKING LIKE THIS EXCEPT EVEN MORE RAGIN AND EVIL
 
-		return null;
+				}
+
+			}
+		}
+		LList ret=new LList();
+		for(int i=0;i<karma;i++){
+			ret.append(data[i]);
+		}
+		return ret;
 	}
 }
