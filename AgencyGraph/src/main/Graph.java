@@ -140,7 +140,7 @@ public class Graph {
 
 
 	}
-	private LList chooser(LList llist, int karma){//first maybe the most connections, then maybe those that have not yet been added or those that have not yet been infected
+	private LList chooser(LList llist, int karma){//sort by min(karma, connection length) should be from max to min
 		if(llist.getLength()<karma)return llist;
 		Node[] data=new Node[llist.getLength()];
 		Node temp=llist.getFirst();
@@ -162,19 +162,16 @@ public class Graph {
 		if(data.length>karma) {
 			//sort
 			for (int i = 0; i < data.length - 1; i++) {
+				int max = i;
 				for (int j = i + 1; j < data.length; j++) {
-					//data[i]is the first thing
-					// data [j is the second
-					//just swap them if Math.min(j.karma,j.adjacent nodes)>Math.min(i.karma,i.adjacentNodes)
-				/*
-				use this bullshit code to easy swap:(this works, it swaps the memory addresses. If you dont want to use this, do whatever the fuck you want)
-				data[i]^=data[i]^data[j]
-				data[j]^=data[j]^data[i]
-				data[i]^=data[i]^data[j]
-				 */
-					//HELP ME WITH THE SWAP WTF IS THIS CASTING NONSENSE THIS IS WHY WE USE GENERICS OR ELSE YOU GET A MUMBLING AND RAGING MESS THAT IS NOT AT ALL HAPPY WHICH ENDS UP LOOKING LIKE THIS EXCEPT EVEN MORE RAGIN AND EVIL
+					if(Math.min(((GraphNode)data[j].getData()).getPerson().getKarma(),((LList)adjList.adjfind(((GraphNode)data[j].getData())).getData()).getLength()) > (Math.min(((GraphNode)data[i].getData()).getPerson().getKarma(),((LList)adjList.adjfind(((GraphNode)data[i].getData())).getData()).getLength()))){
+						max = j;
+					} //end if
 
 				}
+				Node t = data[i];
+				data[max] = data[i];
+				data[i] = temp;
 
 			}
 		}
@@ -184,4 +181,4 @@ public class Graph {
 		}
 		return ret;
 	}
-}
+} //end class
