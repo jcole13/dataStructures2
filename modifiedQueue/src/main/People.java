@@ -10,7 +10,13 @@ public class People {
 	private int impatience_level;
 	private int VIP;//the lower the vip level the better
 	public People() {//65-90,97-122
-		this("anon");
+		this("");
+		name+=(char)(65+Math.random()*26);
+		name+=(char)(97+Math.random()*26);
+		name+=(char)(97+Math.random()*26);
+		name+=(char)(97+Math.random()*26);
+		name+=(char)(97+Math.random()*26);
+
 	}
 	//constructor
 	public People(String name){ //constructor
