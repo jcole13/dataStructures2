@@ -5,12 +5,14 @@ public class GraphNode {
 	private People label;
 	private boolean visited; //check if search reached it
 	private boolean settled;
+	private boolean clustervisited;
 	private int numOfConnections;
 	//constructor
 	public GraphNode(People p) {
 		label = p;
 		visited = false;
 		settled = false;
+		clustervisited = false;
 		
 	} //end constructor
 	//getters and setters
@@ -27,6 +29,8 @@ public class GraphNode {
 	public void setSettled(boolean settled){this.settled = settled;}
 	public int getNumOfConnections(){return numOfConnections;}
 	public void incrementConnections(){numOfConnections++;}
+	public boolean getClusterVisited(){return clustervisited;}
+	public void setClustervisited(boolean bool){clustervisited = bool;}
 	/**An incorrect override
 	 * @param //Takes a graphnode to compare this to
 	 * @return true or false based on the name

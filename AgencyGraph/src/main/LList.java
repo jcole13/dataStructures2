@@ -63,7 +63,7 @@ public class LList {
 	 * @param //it needs a graphnode, but it is for a specific usage of the adjacency list
 	 * @return returns a node within the graphnode, or a null if it cannot be found
 	 */
-	public Node adjfind(GraphNode n) { //use for adjacency list
+	public Node adjfind(GraphNode n) { //use for adjacency list, only LList that has a sub-LList, otherwise classcast exception
 		Node i = header.getNext();
 		do {
 			if (((LList) i.getData()).getLabel().equals(n)) return i;//where to break off
@@ -93,7 +93,7 @@ public class LList {
 
 	} //end gnfind
 
-	public void sort() { //sorts in descending order from number of karma points
+	public void sort() { //sorts in descending order from number of karma points, selection sort for now
 		ListIterator max = new ListIterator(getFirst());
 		//System.out.println(max);
 		//System.out.println("I reached good part of this");
@@ -108,8 +108,9 @@ public class LList {
 				int maxkarma = ((GraphNode) max.getData()).getPerson().getKarma();
 				int jConnections = ((GraphNode) j.getData()).getNumOfConnections();
 				int maxConnections = ((GraphNode) max.getData()).getNumOfConnections();
-				if (Math.min(jkarma, jConnections) > Math.min(maxkarma, maxConnections)) {
-					//old code Math.min(jkarma, jlen) > Math.min(maxkarma, maxlen), ((GraphNode) j.getData()).greaterThan((GraphNode) max.getData())
+				if (Math.min(jkarma, jConnections) > Math.min(maxkarma, maxConnections)) { //optimal path, karma is good and connections are good
+					//old code ((GraphNode) j.getData()).greaterThan((GraphNode) max.getData())
+					//puts the most optimal at the front for the loop in findPath to catch
 
 					max = j;
 				}
@@ -119,7 +120,7 @@ public class LList {
 		} //end for
 	} //end sort
 
-	public void swap(ListIterator a, ListIterator b) {
+	public void swap(ListIterator a, ListIterator b) { //literally just switches the data, much easier than switching nodes
 		Object temp = a.getData();
 		a.setdata(b.getData());
 		b.setdata(temp);

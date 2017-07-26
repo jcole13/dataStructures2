@@ -31,8 +31,8 @@ public class Graph {
 
 
 
-	public void findPath(){
-		Queue queue = new Queue();
+	public void findPath(){ //finds the path that touches the most nodes, using a bfs
+		Queue queue = new Queue(); //bfs
 		GraphNode agency = ((LList) adjList.getFirst().getData()).getLabel();//agency
 		Node first = ((LList) adjList.getFirst().getData()).getFirst();
 		queue.join(agency);
@@ -62,17 +62,19 @@ public class Graph {
 			int i = 0;
 			System.out.println(current.getPerson().getName() +" has " + current.getPerson().getKarma() + " karma");
 			while(i < current.getPerson().getKarma() && a != null){
-				if(!((GraphNode)a.getData()).getVisited()) {
+				if(!((GraphNode)a.getData()).getVisited()) { //only interested in new nodes
 					queue.join((GraphNode) a.getData());
 					((GraphNode) a.getData()).setVisited(true);
 					addEdge(agency, (GraphNode) a.getData());
+					System.out.println();
 					System.out.println("Edge added from agency to: " + (GraphNode) a.getData());
+					System.out.println();
 				}
 				else{ //only if the node is already seen, so karma is not wasted looking at the node
 					current.getPerson().incrementkarma();}
 					//System.out.println(((GraphNode) a.getData()) + " has aleady been connected to...");
-				i++;
-				a = a.getNext();
+				i++; //loop
+				a = a.getNext(); //other loop
 			} //end while
 		} //end while
 
@@ -80,25 +82,29 @@ public class Graph {
 
 	} //end findpath
 
-	public void findCluster(){
-		prunebyEdges();
+	public void findCluster(){ //working on it
+		LList possibilities = prunebyEdges();
+		separateClusters(possibilities);
+		System.out.println("Here are the GraphNodes with 4 or more edges: " + possibilities);
 
 	}
 
-	private void prunebyEdges(){ //bfs, check if 4 or more edges. if so, add to an llist (new)
+	private LList prunebyEdges(){ //bfs, check if 4 or more edges. if so, add to an llist (new)
 		Queue queue = new Queue();
+		LList candidates = new LList();
 		GraphNode first = ((LList) adjList.getFirst().getData()).getLabel();
 		//start the queue with the start of the search
 		queue.join(first);
-		first.setVisited(true);
+		first.setClustervisited(true);
+
 		//goes to search
 		while(!queue.isEmpty()) {
 			GraphNode g = (GraphNode) queue.leave();//takes the top of the queue
 			System.out.println("Leave: " + g);
-			//if(g.equals(n)) {//yay, the target was removed
-				//System.out.println("Found: " + g);
-				//return true;
-			//}
+			System.out.println("Connections: " + g.getNumOfConnections());
+			if(g.getNumOfConnections() >= 4) {//yay possible cluster
+				candidates.append(g);
+			}
 			Node node = adjList.adjfind(g);//find everything next to the node
 			Node gn = ((LList) node.getData()).getFirst();//get everything adjacent
 			for(int j = 0; j < ((LList) node.getData()).getLength(); j++) {
@@ -106,10 +112,15 @@ public class Graph {
 					queue.join(((GraphNode)gn.getData()));
 					System.out.println("Join: " + (GraphNode) gn.getData());
 					System.out.println("After Joined: " + queue);
-					((GraphNode) gn.getData()).setVisited(true);//so there is no overlapping
+					((GraphNode) gn.getData()).setClustervisited(true);//so there is no overlapping
 				}
 				gn = gn.getNext(); //next node
 			}//end for
 		} //end while
+			return candidates;
+	} //end prunebyEdges
+
+	private void separateClusters(LList candidates){
+
 	}
 } //end class
