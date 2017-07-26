@@ -119,11 +119,7 @@ public class Runner {//the runner is the main method for all
 		q.addEdge(C, E);
 		q.addEdge(Agency, X);
 
-		A.getPerson().setKarma(2);
-		B.getPerson().setKarma(1);
-		C.getPerson().setKarma(1);
-		D.getPerson().setKarma(2);
-		E.getPerson().setKarma(3);
+
 		//q.findPath();
 
 		Graph a = new Graph();
@@ -141,7 +137,35 @@ public class Runner {//the runner is the main method for all
 		a.addEdge(A, E);
 		a.addEdge(E, F);
 		a.addEdge(C, G);
-		a.findPath();
+		//a.findPath();
+
+		Graph j = new Graph();
+		Agency.getPerson().setKarma(100);
+		A.getPerson().setKarma(10);
+		B.getPerson().setKarma(1);
+		C.getPerson().setKarma(10);
+		D.getPerson().setKarma(10);
+		E.getPerson().setKarma(10);
+		j.addNode(Agency);
+		j.addNode(A);
+		j.addNode(B);
+		j.addNode(C);
+		j.addNode(D);
+		j.addNode(E);
+		j.addNode(F);
+		j.addEdge(Agency, A);
+		j.addEdge(Agency, B);
+		j.addEdge(A,C);
+		j.addEdge(B,C);
+		j.addEdge(C,E);
+		j.addEdge(C,F);
+		j.addEdge(B,D);
+		j.findPath();
+
+
+
+
+
 
 
 

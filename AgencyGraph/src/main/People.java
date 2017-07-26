@@ -44,9 +44,15 @@ public class People {
 		temp += "\n + Karma: " + this.karma;
 		return temp;
 	}
-	
-	public People(){
-		this("Anon");
+
+	public People() {//65-90,97-122 //random names
+		this("");
+		name+=(char)(65+Math.random()*26);
+		name+=(char)(97+Math.random()*26);
+		name+=(char)(97+Math.random()*26);
+		name+=(char)(97+Math.random()*26);
+		name+=(char)(97+Math.random()*26);
+
 	}
 
 }

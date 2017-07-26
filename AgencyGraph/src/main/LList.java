@@ -104,7 +104,12 @@ public class LList {
 				//System.out.println("J: " + j);
 				//System.out.println("Here is the data: " + j.getData());
 				//System.out.println("Here is the max: " + max.getData());
-				if (((GraphNode) j.getData()).greaterThan((GraphNode) max.getData())) {
+				int jkarma = ((GraphNode) j.getData()).getPerson().getKarma();
+				int maxkarma = ((GraphNode) max.getData()).getPerson().getKarma();
+				int jConnections = ((GraphNode) j.getData()).getNumOfConnections();
+				int maxConnections = ((GraphNode) max.getData()).getNumOfConnections();
+				if (Math.min(jkarma, jConnections) > Math.min(maxkarma, maxConnections)) {
+					//old code Math.min(jkarma, jlen) > Math.min(maxkarma, maxlen), ((GraphNode) j.getData()).greaterThan((GraphNode) max.getData())
 
 					max = j;
 				}

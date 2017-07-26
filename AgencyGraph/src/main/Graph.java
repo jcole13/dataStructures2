@@ -18,6 +18,7 @@ public class Graph {
 	public void addEdge(GraphNode f, GraphNode t){//finds the graphnode and connects two things
 		GraphEdge temp = new GraphEdge(f, t);
 		allEdges.append(temp);
+		f.incrementConnections();
 		Node found = adjList.adjfind(f);
 		((LList) found.getData()).append(t);
 	} //end addedge
@@ -78,4 +79,37 @@ public class Graph {
 
 
 	} //end findpath
+
+	public void findCluster(){
+		prunebyEdges();
+
+	}
+
+	private void prunebyEdges(){ //bfs, check if 4 or more edges. if so, add to an llist (new)
+		Queue queue = new Queue();
+		GraphNode first = ((LList) adjList.getFirst().getData()).getLabel();
+		//start the queue with the start of the search
+		queue.join(first);
+		first.setVisited(true);
+		//goes to search
+		while(!queue.isEmpty()) {
+			GraphNode g = (GraphNode) queue.leave();//takes the top of the queue
+			System.out.println("Leave: " + g);
+			//if(g.equals(n)) {//yay, the target was removed
+				//System.out.println("Found: " + g);
+				//return true;
+			//}
+			Node node = adjList.adjfind(g);//find everything next to the node
+			Node gn = ((LList) node.getData()).getFirst();//get everything adjacent
+			for(int j = 0; j < ((LList) node.getData()).getLength(); j++) {
+				if(!((GraphNode) gn.getData()).getVisited()) {//skip a place
+					queue.join(((GraphNode)gn.getData()));
+					System.out.println("Join: " + (GraphNode) gn.getData());
+					System.out.println("After Joined: " + queue);
+					((GraphNode) gn.getData()).setVisited(true);//so there is no overlapping
+				}
+				gn = gn.getNext(); //next node
+			}//end for
+		} //end while
+	}
 } //end class

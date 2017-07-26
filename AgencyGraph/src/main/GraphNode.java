@@ -5,6 +5,7 @@ public class GraphNode {
 	private People label;
 	private boolean visited; //check if search reached it
 	private boolean settled;
+	private int numOfConnections;
 	//constructor
 	public GraphNode(People p) {
 		label = p;
@@ -24,6 +25,8 @@ public class GraphNode {
 	}
 	public boolean getSettled(){return settled;}
 	public void setSettled(boolean settled){this.settled = settled;}
+	public int getNumOfConnections(){return numOfConnections;}
+	public void incrementConnections(){numOfConnections++;}
 	/**An incorrect override
 	 * @param //Takes a graphnode to compare this to
 	 * @return true or false based on the name
