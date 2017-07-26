@@ -34,8 +34,9 @@ public class Runner {//the runner is the main method for all
 		GraphNode X = new GraphNode(new People("X"));
 		GraphNode Y = new GraphNode(new People("Y"));
 		GraphNode Z = new GraphNode(new People("Z"));
+		System.out.println("CCC" + Agency.getNumOfConnections());
 		//these add all of the nodes to the graph
-		g.addNode(Agency);
+		/*g.addNode(Agency);
 		g.addNode(A);
 		g.addNode(B);
 		g.addNode(C);
@@ -137,7 +138,7 @@ public class Runner {//the runner is the main method for all
 		a.addEdge(A, E);
 		a.addEdge(E, F);
 		a.addEdge(C, G);
-		//a.findPath();
+		//a.findPath();*/
 
 		Graph j = new Graph();
 		Agency.getPerson().setKarma(100);
@@ -155,12 +156,15 @@ public class Runner {//the runner is the main method for all
 		j.addNode(F);
 		j.addEdge(Agency, A);
 		j.addEdge(Agency, B);
+		//System.out.println("\t\t\tCCC" + Agency.getNumOfConnections());
 		j.addEdge(A,C);
 		j.addEdge(B,C);
 		j.addEdge(C,E);
 		j.addEdge(C,F);
 		j.addEdge(B,D);
 		j.findPath();
+		//System.out.println("\t\t\tCCC" + Agency.getNumOfConnections());
+		j.findCluster();
 
 
 
