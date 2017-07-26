@@ -9,7 +9,6 @@ public class Node<E> {
 		previous = null;
 		data = e;
 	}
-	
 	public Node<E> getNext() {
 		return next;
 	}

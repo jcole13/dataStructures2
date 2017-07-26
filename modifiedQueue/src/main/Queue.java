@@ -32,14 +32,11 @@ public class Queue<E> {
 		} //end else
 	} //end join
 	/**
-	 * 
 	 * @return the front of the queue
 	 * @throws QueueEmptyException 
 	 */
 	public E leave() throws QueueEmptyException { // assumes unlimited data
-		//System.out.println("!");
-		if (isEmpty())
-			throw new QueueEmptyException();// TODO make a new Exception
+		if (isEmpty()) throw new QueueEmptyException();// TODO make a new Exception
 		E temp = null;
 		try {//tests if there is a null pointer, which would be a critical error
 		temp = front.getData();
@@ -66,8 +63,8 @@ public class Queue<E> {
 		Node<E> i = front;
 		int j = 0;
 		System.out.println(this);
-		outer:
-		while(i != null) {
+		boolean outer=true;
+		while(i != null&&outer) {
 			if(j++ >= ((People) e).getVIPStatus()) { //cast
 				Node<E> temp = new Node<E>(e);
 				temp.setNext(i.getNext());
@@ -75,31 +72,24 @@ public class Queue<E> {
 				i.setNext(temp);
 				temp.setPrevious(i);
 				length++;
-				break outer;
+				outer=false;
 			}
 			i = i.getNext();
 		}
 		this.incrementImpatience();
 	} // end insertVIP
-	private E leaveFromMiddle(Node<E> n) throws QueueEmptyException {
-		//increment impatience level when adding anything
-		//in increment, add a condition to leave?
-		if (isEmpty())
-			throw new QueueEmptyException();// TODO make a new Exception
-		Node<E> temp = n;
-		if(temp.getPrevious() != null) {
-			temp.getPrevious().setNext(temp.getNext());
-			temp.getNext().setPrevious(temp.getPrevious());
-			length--;
-		}
-		else {
-			System.out.println("Why would the first person in line leave...");
-		}
-		
-
-		return temp.getData();
-		
+	public Node<E> find(Node<E> n) {
+		Node<E> i = front;
+		do{
+			if(((People) i.getData()).getId() == ((People) n.getData()).getId()) return i;//where to break off //cast
+			i = i.getNext();
+		}while(i != null);
+		return null;
 	}
+	public boolean isEmpty() {return length == 0;} //end isempty
+	public int getLength(){return length; }
+
+	@Deprecated
 	public Node<E> findByID(int id) {//returns the node
 		Node<E> i=front;
 		while(i!=null) {
@@ -108,6 +98,7 @@ public class Queue<E> {
 		}
 		return null;
 	}
+	@Deprecated
 	public Node<E> findByName(String name) {//returns the node
 		Node<E> i=front;
 		while(i!=null) {
@@ -116,7 +107,6 @@ public class Queue<E> {
 		}
 		return null;
 	}
-	
 	private void incrementImpatience() throws QueueEmptyException {
 		Node<E> i = front;
 		//boolean removed = false;
@@ -131,7 +121,6 @@ public class Queue<E> {
 			i = i.getNext();
 			
 		}
-		
 	} //end incrementImpatience
 	private void decrementImpatience() {
 		Node<E> i = front;
@@ -139,18 +128,6 @@ public class Queue<E> {
 			((People) i.getData()).minusImpatience(); //cast
 		}
 	} //end incrementImpatience
-	
-	public Node<E> find(Node<E> n) {
-		Node<E> i = front;
-		do{
-			if(((People) i.getData()).getId() == ((People) n.getData()).getId()) return i;//where to break off //cast
-			i = i.getNext();
-		}while(i != null);
-		return null;
-	}
-	public boolean isEmpty() {return length == 0;} //end isempty
-	public int getLength(){return length;
-	}
 	/**@return the top queue in the form of a string
 	 * 
 	 */
@@ -164,5 +141,19 @@ public class Queue<E> {
 		} //end while
 		return temp.substring(0, temp.length()-1) + "]";
 	}//end toString
+	private E leaveFromMiddle(Node<E> n) throws QueueEmptyException {
+		//increment impatience level when adding anything
+		//in increment, add a condition to leave?
+		if (isEmpty()) throw new QueueEmptyException();// TODO make a new Exception
+		Node<E> temp = n;
+		if(temp.getPrevious() != null) {
+			temp.getPrevious().setNext(temp.getNext());
+			temp.getNext().setPrevious(temp.getPrevious());
+			length--;
+		} else {
+			System.out.println("Why would the first person in line leave...");
+		}
+		return temp.getData();
+	}
 
 } //end class

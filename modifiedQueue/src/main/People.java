@@ -61,9 +61,14 @@ public class People {
 	public boolean checkImpatience() {
 		return impatience_level > impatience_total;
 	}
-	
+
 	public void minusImpatience() {
 		impatience_level--;
+	}
+	@Override
+	public boolean equals(Object o){
+		if(!(o instanceof People))return false;
+		return this.id==((People) o).getId();
 	}
 	@Override
 	public String toString(){ //list facts about a person
