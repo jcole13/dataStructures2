@@ -18,7 +18,7 @@ public class Queue {
 	 * 
 	 * @param //an object which you wish to store in a node
 	 */
-	public void join(Object p){
+	public void join(Object p){ //joins to the back
 		Node temp = new Node(p);
 		if(isEmpty()){//tests if the queue is null
 			back = temp;
@@ -30,7 +30,7 @@ public class Queue {
 			back = back.getNext();
 			length++;
 		}
-	}
+	} //end join
 	/**
 	 * 
 	 * @return the front of the queue
@@ -48,7 +48,7 @@ public class Queue {
 		front = front.getNext();
 		length--;
 		return temp;
-	}
+	} //end leave
 	public Object look() {//this peeks at the front of the queue
 		return front;
 	}
@@ -65,6 +65,6 @@ public class Queue {
 			on = on.getNext();
 		}
 		return temp.substring(0, temp.length()-1) + "]";
-	}
+	} //end toString
 
-}
+} //end class

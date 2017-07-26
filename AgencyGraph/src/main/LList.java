@@ -11,13 +11,13 @@ public class LList {
 		label = null;
 		header = new Node();
 		length = 0;
-	}
+	} //end constructor
 
 	public LList(GraphNode o) {
 		label = o;
 		header = new Node();
 		length = 0;
-	}
+	} //end constructor
 
 	//setters and getters
 	public Node getFirst() {
@@ -39,7 +39,7 @@ public class LList {
 	/**
 	 * @param //object which to add to the back of the list
 	 */
-	public void append(Object p) {
+	public void append(Object p) { //adds to the end of the list
 		if (isEmpty()) {//checks if the list is empty to avoid a nullpointer
 			Node temp = new Node(p);
 			header.setNext(temp);//switching
@@ -55,7 +55,7 @@ public class LList {
 			length++;
 		}
 
-	}
+	} //end append
 
 	/**
 	 * Overloaded method
@@ -70,7 +70,7 @@ public class LList {
 			i = i.getNext();
 		} while ((i.getData() != null) && !(((LList) i.getData()).equals(n)));
 		return null;
-	}
+	} //end adjfind
 
 	/**
 	 * Overloaded method
@@ -78,7 +78,7 @@ public class LList {
 	 * @param //String to find the specific GraphNode
 	 * @return a GraphNode with the name
 	 */
-	public GraphNode gnFind(String s) {
+	public GraphNode gnFind(String s) { //to be used if time
 		Node i = header.getNext();
 		do {
 			if (((LList) i.getData()).getLabel().getPerson().getName().equals(s)) {
@@ -93,15 +93,15 @@ public class LList {
 
 	} //end gnfind
 
-	public void sort() { //in llist
+	public void sort() { //sorts in descending order from number of karma points
 		ListIterator max = new ListIterator(getFirst());
 		//System.out.println(max);
-		System.out.println("I reached good part of this");
+		//System.out.println("I reached good part of this");
 		if(length < 1) return;
 		for (ListIterator i = max; !i.atEnd(); i.plusplus()) {
 			max = i;
 			for (ListIterator j = i.getNext(); !j.atEnd(); j.plusplus()) {
-				System.out.println("J: " + j);
+				//System.out.println("J: " + j);
 				//System.out.println("Here is the data: " + j.getData());
 				//System.out.println("Here is the max: " + max.getData());
 				if (((GraphNode) j.getData()).greaterThan((GraphNode) max.getData())) {
@@ -118,7 +118,7 @@ public class LList {
 		Object temp = a.getData();
 		a.setdata(b.getData());
 		b.setdata(temp);
-	}
+	} //end swap
 	@Override
 	public String toString() {
 		Node temp = header.getNext();
@@ -129,5 +129,5 @@ public class LList {
 		}
 		//if(label != null) return label.toString();
 		return result;
-	}
+	}//end tostring
 }

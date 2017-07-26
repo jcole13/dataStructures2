@@ -6,8 +6,8 @@ public class GraphEdge {//this is not really used
 		cong = m;
 		qu = l;
 
-	}
+	} //end constructor
 	public String toString() {
 		return "from:" + cong + "to:" + qu + "!" ;
-	}
+	} //end tostring
 }

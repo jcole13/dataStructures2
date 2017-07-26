@@ -11,7 +11,7 @@ public class GraphNode {
 		visited = false;
 		settled = false;
 		
-	}
+	} //end constructor
 	//getters and setters
 	public People getPerson() {
 		return label;
@@ -30,12 +30,12 @@ public class GraphNode {
 	 */
 	public boolean equals(GraphNode n) {
 		return this.label.getName().equals(n.getPerson().getName());
-	}
+	} //check equal names
 	public boolean greaterThan(GraphNode n){
 		return this.getPerson().getKarma() > n.getPerson().getKarma();
-	}
+	} //check if the first one has a greater karma than the second
 	@Override
 	public String toString() {
 		return label.getName();
-	}
+	} //tostring
 }
