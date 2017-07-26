@@ -15,14 +15,13 @@ public class ListIterator {
     }
 
     public Object getData() {
-        if(myNode.getData() != null) System.out.println("This is not null...");
+        //if(myNode.getData() != null) System.out.println("This is not null...");
         return this.myNode.getData();
-    }
+    } //end getdata
 
     public void plusplus() {
         this.myNode = this.myNode.getNext();
-//check if myNode == null
-    }
+    }//end plusplus
 
     public boolean atEnd() {
         return this.myNode == null;
@@ -32,7 +31,7 @@ public class ListIterator {
         return new ListIterator(myNode.getNext());
     }
 
-    public void setdata(Object a) {
+    public void setdata(Object a) { //set node data
         myNode.setData(a);
 
     }

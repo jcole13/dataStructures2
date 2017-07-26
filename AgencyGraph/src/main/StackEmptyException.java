@@ -4,10 +4,10 @@ public class StackEmptyException extends RuntimeException{//this exception gets 
 	/**
 	 * the following is randomly generated code
 	 */
-	private static final long serialVersionUID = 2685788240441941748L;
+	private static final long serialVersionUID = 2685788240441941748L; //idk
 
 	public StackEmptyException(){//default constructor
 		super("Empty");
-	}
+	} //constructor
 
 }

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class UI {
 	
-	public void UserInput() {
+	public void UserInput() { //do not use, remnant code
 		//initiate the graph
 		Graph g = new Graph();
 		//These are the the initiation for all the nodes.

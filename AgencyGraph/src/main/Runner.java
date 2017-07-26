@@ -6,7 +6,7 @@ public class Runner {//the runner is the main method for all
 		//UI ui = new UI();
 		//ui.UserInput();
 		Graph g = new Graph();
-		//These are the the initiation for all the nodes.
+		//These are the the initiation for all the nodes. just for now, testing
 		GraphNode Agency = new GraphNode(new People("Agency"));
 		GraphNode A = new GraphNode(new People("A"));
 		GraphNode B = new GraphNode(new People("B"));

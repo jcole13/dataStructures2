@@ -15,7 +15,7 @@ public class Node {
 		next = null;
 		previous = null;
 	}
-	//getters and setters
+	//getters and setters, all it is
 	public Node getNext() {
 		return next;
 	}

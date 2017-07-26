@@ -33,7 +33,7 @@ public class People {
 	public int getKarma(){return karma;}
 	public void setKarma(int w){karma = w;}
 	public int getWorth(){return worth;}
-	public void incrementkarma(){
+	public void incrementkarma(){ //used in graph, if person is already seen, to keep loop on track
 		karma++;}
 
 
