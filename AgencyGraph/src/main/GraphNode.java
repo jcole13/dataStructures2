@@ -2,7 +2,7 @@ package main;
 
 public class GraphNode {
 	//instance variables
-	private People label;
+	private final People label;
 	private boolean visited; //check if search reached it
 	private boolean settled;
 	private int numOfConnections;
@@ -34,9 +34,6 @@ public class GraphNode {
 	public boolean equals(GraphNode n) {
 		return this.label.getName().equals(n.getPerson().getName());
 	} //check equal names
-	public boolean greaterThan(GraphNode n){
-		return this.getPerson().getKarma() > n.getPerson().getKarma();
-	} //check if the first one has a greater karma than the second
 	@Override
 	public String toString() {
 		return label.getName();

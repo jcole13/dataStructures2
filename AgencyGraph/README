@@ -1,0 +1,28 @@
+#**README**
+###`Short:`
+This class creates a graph, it can either choose to randomly create it, or it can create a specific graph.
+Each part of the graph is a graph node, which each contains a person.
+The karma is the amount of times you can ask a certain person to spread the agency.
+There is the ability to also do the following:
+
+
+###`Detailed Description`
+#####The graph is the main class that does the work
+>It is constructed by its only constructor, which has no arguments.
+One has to add a Graphnode to the Graph to start using the GraphNode, through the method addNode(GraphNode) . 
+You can add an edge between two Graphnodes Through addEdge.
+The final method which does all the work is the findPath method, which will display on the system how it navigates through the graph.
+
+#####GraphNode is the object that will be in the graph and holding people
+>It has one constructor, which takes in a person to hold
+it has a few instance variables, which one holds a person, visited is for a queue in our transverse method, and numconnections which tells how many connections this class is connected to
+it has a few getters, setters and changers. 
+
+
+
+#####People is the object which will be held by graphNode
+>It has 2 constructors, that of a string where the string is the name of the person to create.
+The other constructor 
+
+
+###`Testing`
