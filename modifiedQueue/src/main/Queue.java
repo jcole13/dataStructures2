@@ -18,6 +18,7 @@ public class Queue<E> {
 	 */
 	public void join(E e) throws QueueEmptyException{
 		Node<E> temp = new Node<>(e);
+		System.out.println("Adding person to the back...");
 		if(isEmpty()){//tests if the queue is null
 			back = temp;
 			front = back; 
@@ -38,15 +39,16 @@ public class Queue<E> {
 	public E leave() throws QueueEmptyException { // assumes unlimited data
 		if (isEmpty()) throw new QueueEmptyException();// TODO make a new Exception
 		E temp = null;
+		System.out.println("Front person is leaving...");
 		try {//tests if there is a null pointer, which would be a critical error
 		temp = front.getData();
 		}catch(NullPointerException npe) {
 			System.out.println("Null Pointer");
 		}
-		System.out.println("HERE IS THE PERSON WHO LEAVES!!! " + temp);
+		//System.out.println("HERE IS THE PERSON WHO LEAVES!!! " + temp);
 		front = front.getNext();
-		//front.setPrevious(null);
-		System.out.println("Someone has left");
+		front.setPrevious(null);
+		//System.out.println("Someone has left");
 		length--; //decrement length if leave
 		decrementImpatience();//if people leave, their impatience decreases
 		//System.out.println("HERE IS THE PERSON WHO LEAVES!!! " + temp);
@@ -56,6 +58,7 @@ public class Queue<E> {
 		return front.getData();
 	} //end look
 	public void insertVIP(E e) throws QueueEmptyException {//takes more overhead than just regularly joining
+		System.out.println("Inserting a VIP at position" + ((People)e).getVIPStatus());
 		if(length <= ((People) e).getVIPStatus()) { //casted
 			join(e);
 			return;
@@ -123,9 +126,11 @@ public class Queue<E> {
 		}
 	} //end incrementImpatience
 	private void decrementImpatience() {
-		Node<E> i = front;
+		Node<E> i = front.getNext();
 		while(i != null) {
+			//System.out.println("Loop");
 			((People) i.getData()).minusImpatience(); //cast
+			i = i.getNext();
 		}
 	} //end incrementImpatience
 	/**@return the top queue in the form of a string
@@ -144,6 +149,7 @@ public class Queue<E> {
 	private E leaveFromMiddle(Node<E> n) throws QueueEmptyException {
 		//increment impatience level when adding anything
 		//in increment, add a condition to leave?
+
 		if (isEmpty()) throw new QueueEmptyException();// TODO make a new Exception
 		Node<E> temp = n;
 		if(temp.getPrevious() != null) {
