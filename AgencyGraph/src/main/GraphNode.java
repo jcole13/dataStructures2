@@ -7,6 +7,7 @@ public class GraphNode {
 	private boolean settled;
 	private boolean clustervisited;
 	private int numOfConnections;
+	public static int Visited=0;
 	//constructor
 	public GraphNode(People p) {
 		label = p;
@@ -24,6 +25,7 @@ public class GraphNode {
 	}
 	public void setVisited(boolean visited) {
 		this.visited = visited;
+		Visited++;
 	}
 	public boolean getSettled(){return settled;}
 	public void setSettled(boolean settled){this.settled = settled;}
@@ -31,7 +33,6 @@ public class GraphNode {
 	public void incrementConnections(){numOfConnections++;}
 	public boolean getClusterVisited(){return clustervisited;}
 	public void setClustervisited(boolean bool){clustervisited = bool;}
-
 	@Override
 	public boolean equals(Object n) {
 		if(!(n instanceof GraphNode))return false;

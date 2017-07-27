@@ -4,13 +4,6 @@ public class Queue {
 	//instance variables
 	private Node front, back;
 	private int length;
-	/**
-	 * these are the constructors
-	 * @param size
-	 */
-	public Queue(int size) {
-		length = size;
-	}
 	public Queue() {
 		length = 0;
 	}

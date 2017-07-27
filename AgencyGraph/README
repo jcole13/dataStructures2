@@ -31,6 +31,9 @@ There is also a toString Override.
 #####Other Used Classes
 >GraphEdge is a list of edges that connect 2 graph nodes together, and it has some overriden methods
 ListIterator is a helper method that helps LList to sort
+LLinked list is a helper class that helps graph and graph nodes to run, it works like a reular linked list with append, and remove
+Node is a helping class that helps linked list to work, it holds the data
+
 
 
 
