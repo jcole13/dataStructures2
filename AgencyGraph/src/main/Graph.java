@@ -31,7 +31,8 @@ public class Graph {
 
 
 
-	public void findPath(){ //finds the path that touches the most nodes, using a bfs
+	public int findPath(){ //finds the path that touches the most nodes, using a bfs
+		int counter = 0;
 		Queue queue = new Queue(); //bfs
 		GraphNode agency = ((LList) adjList.getFirst().getData()).getLabel();//agency
 		Node first = ((LList) adjList.getFirst().getData()).getFirst();
@@ -68,6 +69,7 @@ public class Graph {
 					addEdge(agency, (GraphNode) a.getData());
 					System.out.println();
 					System.out.println("Edge added from agency to: " + (GraphNode) a.getData());
+					counter++;
 					System.out.println();
 				}
 				else{ //only if the node is already seen, so karma is not wasted looking at the node
@@ -77,7 +79,7 @@ public class Graph {
 				a = a.getNext(); //other loop
 			} //end while
 		} //end while
-
+		return counter;
 
 
 	} //end findpath

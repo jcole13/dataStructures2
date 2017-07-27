@@ -30,6 +30,8 @@ There is also a toString Override.
 
 #####Other Used Classes
 >GraphEdge is a list of edges that connect 2 graph nodes together, and it has some overriden methods
+ListIterator is a helper method that helps LList to sort
+
 
 
 ###`Testing`
