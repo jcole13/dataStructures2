@@ -39,6 +39,7 @@ The two exceptions are if the queue is too small or the stack is empty. Neither 
 
 
 ###`Testing`
+-Random flat testing
 >The agency tries to connect to as many people in the graph as it can.
 It tends to vary from 20-70 %
 out of a srs of 60 samples (yes i did run this trial 60 times), with 100!! nodes
@@ -46,3 +47,9 @@ we got an average of approximately 33.1167 %
 we are 95% confident that the true mean of our program is 29-37 percent efficient
 One of the biggest causes of this is our random graph generator. 
 Sometimes, a large chunk of the graph might not have been connected, and as such the graph has to go missing.
+Also, the Agency might get really unlucky and get only one additional friend(as opposed to the given 2), leading to much less choices
+
+
+-Different nonRandom testing
+>We have tested the choice that the program chooses on smaller scale graph(e.g. ~10 -20 nodes)
+It has better results as the program automatically gives 2 nodes, and as such can get all the way to the high 90%
