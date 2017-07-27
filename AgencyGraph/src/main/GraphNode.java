@@ -2,7 +2,7 @@ package main;
 
 public class GraphNode {
 	//instance variables
-	private People label;
+	private final People label;
 	private boolean visited; //check if search reached it
 	private boolean settled;
 	private boolean clustervisited;
@@ -31,16 +31,12 @@ public class GraphNode {
 	public void incrementConnections(){numOfConnections++;}
 	public boolean getClusterVisited(){return clustervisited;}
 	public void setClustervisited(boolean bool){clustervisited = bool;}
-	/**An incorrect override
-	 * @param //Takes a graphnode to compare this to
-	 * @return true or false based on the name
-	 */
-	public boolean equals(GraphNode n) {
-		return this.label.getName().equals(n.getPerson().getName());
+
+	@Override
+	public boolean equals(Object n) {
+		if(!(n instanceof GraphNode))return false;
+		return this.label.getName().equals(((GraphNode)n).getPerson().getName());
 	} //check equal names
-	public boolean greaterThan(GraphNode n){
-		return this.getPerson().getKarma() > n.getPerson().getKarma();
-	} //check if the first one has a greater karma than the second
 	@Override
 	public String toString() {
 		return label.getName();

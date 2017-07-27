@@ -1,6 +1,5 @@
 package main;
 
-import java.util.Random;
 
 public class People {
 	//instance variables
@@ -9,16 +8,12 @@ public class People {
 	private String name;
 	private int id; // unique for each person
 	private int karma;
-	private int worth;
-
 	//constructor
 	public People(String name){ //constructor
 		this.name = name;
 		this.id = STARTING_ID + number_made;
 		number_made++; //incrementing this static variable
 		karma = 1 + (int)(Math.random() * 5);
-		worth = 0;
-
 	}
 	//setters and getters
 	public String getName() {
@@ -32,11 +27,8 @@ public class People {
 	}
 	public int getKarma(){return karma;}
 	public void setKarma(int w){karma = w;}
-	public int getWorth(){return worth;}
 	public void incrementkarma(){ //used in graph, if person is already seen, to keep loop on track
 		karma++;}
-
-
 	@Override
 	public String toString(){ //list facts about a person
 		String temp = "Name: " + this.name;
@@ -44,7 +36,6 @@ public class People {
 		temp += "\n + Karma: " + this.karma;
 		return temp;
 	}
-
 	public People() {//65-90,97-122 //random names
 		this("");
 		name+=(char)(65+Math.random()*26);
