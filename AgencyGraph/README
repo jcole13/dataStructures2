@@ -17,12 +17,19 @@ The final method which does all the work is the findPath method, which will disp
 >It has one constructor, which takes in a person to hold
 it has a few instance variables, which one holds a person, visited is for a queue in our transverse method, and numconnections which tells how many connections this class is connected to
 it has a few getters, setters and changers. 
-
+it also has a few overriden methods from object
 
 
 #####People is the object which will be held by graphNode
 >It has 2 constructors, that of a string where the string is the name of the person to create.
-The other constructor 
+The other constructor creates a random name of 5 letters long, allowing for 11881376 total names.
+each person has a identical id assigned to each of them.
+they each have a randomly set karma, but you can use the .setKarma to change thier karma.
+There are other getters, setters and incrementors.
+There is also a toString Override.
+
+#####Other Used Classes
+>GraphEdge is a list of edges that connect 2 graph nodes together, and it has some overriden methods
 
 
 ###`Testing`
