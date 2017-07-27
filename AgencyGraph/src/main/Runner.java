@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Random;
+
 public class Runner {//the runner is the main method for all
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -138,7 +140,7 @@ public class Runner {//the runner is the main method for all
 		a.addEdge(A, E);
 		a.addEdge(E, F);
 		a.addEdge(C, G);
-		//a.findPath();*/
+		//a.findPath();
 
 		Graph j = new Graph();
 		Agency.getPerson().setKarma(100);
@@ -164,7 +166,11 @@ public class Runner {//the runner is the main method for all
 		j.addEdge(B,D);
 		j.findPath();
 		//System.out.println("\t\t\tCCC" + Agency.getNumOfConnections());
-		j.findCluster();
+		j.findCluster();*/
+
+		Graph gr = RandomGraph.getGraph();
+		int num = gr.findPath();
+		System.out.println("Agency added " + num + " connections!");
 
 
 
@@ -176,5 +182,31 @@ public class Runner {//the runner is the main method for all
 
 
 
-	}
-}
+
+	} //end main
+
+	public static void intro(){ //just some introductions
+		System.out.println("##############################################################################################################");
+		System.out.println("Welcome to our graph simulator");
+		System.out.println();
+		System.out.println("We have made the program to simulate an ad agency who would like");System.out.println();
+		System.out.println("to become friends with as many people as possible through the network of friends");
+		System.out.println();
+		System.out.println("The agency can only make friends through mutual friends, and can only leverage existing");
+		System.out.println("friendships to make new ones to the extent of each person's karma points.");
+		System.out.println();
+		System.out.println("A random graph of 20 nodes will be generated with random names, and the path to the most amount of friends");
+		System.out.println("will be printed to the console.");
+		System.out.println();
+		System.out.println("The agency will friend these people utilizing a breadth-first-search");
+		System.out.println();
+		System.out.println("We hope you enjoy!");
+		System.out.println("##############################################################################################################");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+
+
+	} //end intro
+} //end class
