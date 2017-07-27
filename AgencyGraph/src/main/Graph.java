@@ -22,14 +22,10 @@ public class Graph {
 		Node found = adjList.adjfind(f);
 		((LList) found.getData()).append(t);
 	} //end addedge
-	public LList getAllNodes(){
+
+	public LList getAllNodes() {
 		return allNodes;
 	}
-	public LList getAdjacency() {
-		return adjList;
-	}
-
-
 
 	public int findPath(){ //finds the path that touches the most nodes, using a bfs
 		int counter = 0;

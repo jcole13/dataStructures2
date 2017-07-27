@@ -31,7 +31,18 @@ There is also a toString Override.
 #####Other Used Classes
 >GraphEdge is a list of edges that connect 2 graph nodes together, and it has some overriden methods
 ListIterator is a helper method that helps LList to sort
+LLinked list is a helper class that helps graph and graph nodes to run, it works like a reular linked list with append, and remove
+Node is a helping class that helps linked list to work, it holds the data
+Queue is for the traveling method
+The two exceptions are if the queue is too small or the stack is empty. Neither should be hit.
 
 
 
 ###`Testing`
+>The agency tries to connect to as many people in the graph as it can.
+It tends to vary from 20-70 %
+out of a srs of 60 samples (yes i did run this trial 60 times), with 100!! nodes
+we got an average of approximately 33.1167 %
+we are 95% confident that the true mean of our program is 29-37 percent efficient
+One of the biggest causes of this is our random graph generator. 
+Sometimes, a large chunk of the graph might not have been connected, and as such the graph has to go missing.

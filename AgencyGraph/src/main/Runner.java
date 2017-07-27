@@ -7,6 +7,7 @@ public class Runner {//the runner is the main method for all
 		// TODO Auto-generated method stub
 		//UI ui = new UI();
 		//ui.UserInput();
+
 		Graph g = new Graph();
 		//These are the the initiation for all the nodes. just for now, testing
 		GraphNode Agency = new GraphNode(new People("Agency"));
@@ -167,6 +168,7 @@ public class Runner {//the runner is the main method for all
 		j.findPath();
 		//System.out.println("\t\t\tCCC" + Agency.getNumOfConnections());
 		j.findCluster();*/
+<<<<<<< HEAD
 		intro();
 		Graph gr = RandomGraph.getGraph();
 		int num = gr.findPath();
@@ -181,6 +183,11 @@ public class Runner {//the runner is the main method for all
 
 
 
+=======
+		Graph gr = RandomGraph.getGraph(101);
+		gr.findPath();
+		System.out.println("Agency added " + (GraphNode.Visited-1)+ " connections!("+((GraphNode.Visited-1)/((double)gr.getAllNodes().getLength()-1))+"%) of the people!");
+>>>>>>> 208b9cf5e8d0bfdb593a5594216a0e157155621e
 
 
 	} //end main
@@ -206,7 +213,6 @@ public class Runner {//the runner is the main method for all
 		System.out.println();
 		System.out.println();
 		System.out.println();
-
 
 	} //end intro
 } //end class
