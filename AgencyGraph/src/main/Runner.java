@@ -167,7 +167,7 @@ public class Runner {//the runner is the main method for all
 		j.findPath();
 		//System.out.println("\t\t\tCCC" + Agency.getNumOfConnections());
 		j.findCluster();*/
-
+		intro();
 		Graph gr = RandomGraph.getGraph();
 		int num = gr.findPath();
 		System.out.println("Agency added " + num + " connections!");
