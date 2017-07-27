@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9d693b7-bbe3-4f4a-a682-5b0bd9742694" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AgencyGraph/main/Graph.class" afterPath="$PROJECT_DIR$/out/production/AgencyGraph/main/Graph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AgencyGraph/main/People.class" afterPath="$PROJECT_DIR$/out/production/AgencyGraph/main/People.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AgencyGraph/main/Queue.class" afterPath="$PROJECT_DIR$/out/production/AgencyGraph/main/Queue.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AgencyGraph/main/RandomGraph.class" afterPath="$PROJECT_DIR$/out/production/AgencyGraph/main/RandomGraph.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AgencyGraph/main/Runner.class" afterPath="$PROJECT_DIR$/out/production/AgencyGraph/main/Runner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AgencyGraph/README" afterPath="$PROJECT_DIR$/AgencyGraph/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AgencyGraph/src/main/Graph.java" afterPath="$PROJECT_DIR$/AgencyGraph/src/main/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AgencyGraph/src/main/GraphNode.java" afterPath="$PROJECT_DIR$/AgencyGraph/src/main/GraphNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AgencyGraph/src/main/People.java" afterPath="$PROJECT_DIR$/AgencyGraph/src/main/People.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AgencyGraph/src/main/Queue.java" afterPath="$PROJECT_DIR$/AgencyGraph/src/main/Queue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AgencyGraph/src/main/RandomGraph.java" afterPath="$PROJECT_DIR$/AgencyGraph/src/main/RandomGraph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AgencyGraph/src/main/Runner.java" afterPath="$PROJECT_DIR$/AgencyGraph/src/main/Runner.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,12 +17,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="173" column="147" lean-forward="false" selection-start-line="173" selection-start-column="147" selection-end-line="173" selection-end-column="147" />
+            <state relative-caret-position="369">
+              <caret line="169" column="26" lean-forward="false" selection-start-line="169" selection-start-column="26" selection-end-line="169" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StackEmptyException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/StackEmptyException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AgencyGraph/README">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="177">
+                <caret line="34" column="73" lean-forward="true" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -40,7 +53,7 @@
       <file leaf-file-name="UI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/UI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1863">
+            <state relative-caret-position="351">
               <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -88,23 +101,13 @@
       <file leaf-file-name="RandomGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/RandomGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+            <state relative-caret-position="-366">
               <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
                 <element signature="e#162#163#0" expanded="true" />
                 <element signature="e#2430#2431#0" expanded="true" />
                 <element signature="e#2465#2466#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/LList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="50" column="14" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -119,16 +122,6 @@
                 <element signature="e#756#757#0" expanded="true" />
                 <marker date="1501115355100" expanded="true" signature="4465:4468" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListIterator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/ListIterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -158,13 +151,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AgencyGraph/README" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/People.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/Queue.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/GraphNode.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/Graph.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/RandomGraph.java" />
         <option value="$PROJECT_DIR$/AgencyGraph/src/main/Runner.java" />
+        <option value="$PROJECT_DIR$/AgencyGraph/README" />
       </list>
     </option>
   </component>
@@ -652,12 +645,12 @@
       <workItem from="1501083898042" duration="2804000" />
       <workItem from="1501090239930" duration="3644000" />
       <workItem from="1501105577690" duration="608000" />
-      <workItem from="1501107329672" duration="5716000" />
+      <workItem from="1501107329672" duration="6832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13088000" />
+    <option name="totallyTimeSpent" value="14204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -672,11 +665,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25275937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25275937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1014,14 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/StackEmptyException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/TooSmallException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1035,17 +1020,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgencyGraph/README">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="423">
-            <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1091,29 +1065,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/UI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1863">
-          <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1125,18 +1081,6 @@
             <element signature="e#734#735#0" expanded="true" />
             <element signature="e#756#757#0" expanded="true" />
             <marker date="1501115355100" expanded="true" signature="4465:4468" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/RandomGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="e#162#163#0" expanded="true" />
-            <element signature="e#2430#2431#0" expanded="true" />
-            <element signature="e#2465#2466#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1163,11 +1107,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/StackEmptyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/RandomGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-366">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="e#162#163#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2465#2466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AgencyGraph/src/main/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="173" column="147" lean-forward="false" selection-start-line="173" selection-start-column="147" selection-end-line="173" selection-end-column="147" />
+        <state relative-caret-position="369">
+          <caret line="169" column="26" lean-forward="false" selection-start-line="169" selection-start-column="26" selection-end-line="169" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AgencyGraph/README">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="177">
+            <caret line="34" column="73" lean-forward="true" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
