@@ -4,6 +4,7 @@ public class Queue<E> {
 	//instance variables
 	private Node<E> front, back;
 	private int length;
+	//public BST searcher = new BST();
 	/**
 	 * these are the constructors
 	 * @param
@@ -23,12 +24,16 @@ public class Queue<E> {
 			back = temp;
 			front = back; 
 			length++; //philosophically it feels better
+			//System.out.println((People)temp.getData());
+			//searcher.insert((People)temp.getData());
 		} //end if
 		else{
 			back.setNext(temp);
 			temp.setPrevious(back);
 			back = back.getNext();
 			incrementImpatience();
+			//System.out.println(e);
+			//searcher.insert((People)temp.getData());
 			length++;
 		} //end else
 	} //end join
@@ -51,12 +56,12 @@ public class Queue<E> {
 		//System.out.println("Someone has left");
 		length--; //decrement length if leave
 		decrementImpatience();//if people leave, their impatience decreases
-		//System.out.println("HERE IS THE PERSON WHO LEAVES!!! " + temp);
 		return temp;
 	} //end leave
 	public E look() {//this peeks at the front of the queue
 		return front.getData();
 	} //end look
+
 	public void insertVIP(E e) throws QueueEmptyException {//takes more overhead than just regularly joining
 		System.out.println("Inserting a VIP at position" + ((People)e).getVIPStatus());
 		if(length <= ((People) e).getVIPStatus()) { //casted
@@ -74,11 +79,13 @@ public class Queue<E> {
 				i.getNext().setPrevious(temp);
 				i.setNext(temp);
 				temp.setPrevious(i);
+				//searcher.insert((People)e);
 				length++;
 				outer=false;
 			}
 			i = i.getNext();
 		}
+
 		this.incrementImpatience();
 	} // end insertVIP
 	public Node<E> find(Node<E> n) {
@@ -109,6 +116,9 @@ public class Queue<E> {
 			i=i.getNext();
 		}
 		return null;
+	}
+	public Node getfirst(){
+		return front;
 	}
 	private void incrementImpatience() throws QueueEmptyException {
 		Node<E> i = front;
@@ -155,11 +165,14 @@ public class Queue<E> {
 		if(temp.getPrevious() != null) {
 			temp.getPrevious().setNext(temp.getNext());
 			temp.getNext().setPrevious(temp.getPrevious());
+			People deletee = (People)temp.getData();
+			//searcher.delete(deletee.getName());
 			length--;
 		} else {
 			System.out.println("Why would the first person in line leave...");
 		}
 		return temp.getData();
 	}
+
 
 } //end class

@@ -14,34 +14,45 @@ public class Tester {
         Queue queue = new Queue();
         queue.insertVIP(new People("King", 10, 3));
         System.out.println(queue);
-        queue.join(new People("John", 10, 2));
+        queue.join(new People("Jad", 2, 2));
         System.out.println(queue);
-        queue.join(new People("Jimmy", 2, 2));
+        queue.join(new People("Jimmy", 6, 2));
         System.out.println(queue);
-        queue.join(new People("Jack", 1, 2));
+        queue.join(new People("Jack", 10, 2));
         System.out.println(queue);
         queue.leave();
         System.out.println(queue);
-        queue.join(new People("Jared", 8, 2));
+        queue.join(new People("Jared", 5, 2));
         System.out.println(queue);
-        queue.join(new People("Jay", 4, 2));
+        queue.join(new People("Jay", 3, 2));
         System.out.println(queue);
-        queue.join(new People("Jerry", 10, 2));
+        queue.join(new People("Jerry", 7, 2));
         queue.leave();
         System.out.println(queue);
         queue.join(new People("Jon", 20, 2));
         System.out.println(queue);
-        queue.join(new People("Jane", 3, 2));
+        queue.join(new People("Jane", 2, 2));
         queue.leave();
         System.out.println(queue);
-        queue.join(new People("Jazz", 4, 2));
+        queue.join(new People("Jazz", 6, 2));
         System.out.println(queue);
-        queue.join(new People("Jin", 5, 2));
+        queue.join(new People("Jin", 2, 2));
         System.out.println(queue);
 
         queue.insertVIP(new People("Richard", 10, 3));
 
-        System.out.println(queue);
+        BST searcher = new BST();
+        //searcher.insert(new People("John", 1, 1));
+        Node first = queue.getfirst();
+        while(first != null){
+            searcher.insert((People)first.getData());
+            first = first.getNext();
+        }
+        System.out.println(searcher);
+        System.out.println("Found: " + searcher.find("Richard"));
+
+
+        //System.out.println(queue);
 
     }
 

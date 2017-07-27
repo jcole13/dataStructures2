@@ -8,46 +8,99 @@ public class BST {
     public BST(){super();}
 
     public boolean isEmpty(){return root == null;}
-    public TreeIterator find(int n){
-        return find(n, root); //returns null if not found, and a new treeiterator if found
+
+    public TreeIterator find(String p){
+        return find(p, root); //returns null if not found, and a new treeiterator if found
     }
-    public TreeIterator find(int n, TreeNode t){
-        if(n == t.getData()) return new TreeIterator(t);
-        if(n < t.getData()){
+    public TreeIterator find(String p, TreeNode t){
+        //System.out.println("Got here");
+        if(p.toLowerCase().compareTo(t.getData().getName().toLowerCase()) == 0){
+            //System.out.println("terminate");
+            //System.out.println()
+            return new TreeIterator(t);
+        }
+        if(p.compareTo(t.getData().getName()) < 0){
             if(t.getLeft() == null) return null;
-            else return find(n, t.getLeft());
+            else return find(p, t.getLeft());
         }
         else{
             if(t.getRight() == null) return null;
-            else return find(n, t.getRight());
+            else return find(p, t.getRight());
         }
     }
-    public void delete(int n){
-        TreeIterator found = find(n); //null if not found
+    public void delete(String s){
+        TreeIterator found = find(s); //null if not found
+        System.out.println("After find");
         if(found == null) return;
         if(found.isLeaf()){
-            if(found.isRoot())found = null;
+            System.out.println("1");
+            if(found.isRoot())found.me = null;
             else {
                 TreeNode p = found.me.getParent();
-                if(n < p.getData()) p.setLeft(null);
+                System.out.println("P: " + p);
+                //System.out.println(p.getData().getName());
+                if(s.compareTo(p.getData().getName()) < 0) p.setLeft(null);
                 else p.setRight(null);
             }
+        } else if(found.numChildren() == 1){
+
+            TreeNode p = null;
+            if(!found.isRoot()) p = found.me.getParent();
+            System.out.println("2");
+            //if(p.isRoot())
+            //System.out.println(p.hasLeft());
+            if(p != null) {
+                if (p.hasLeft()) {
+                    if (found.me.hasLeft()) {
+                        p.setLeft(found.me.getLeft());
+                    } else {
+                        p.setLeft(found.me.getRight());
+                    }
+                } else {
+                    if (found.me.hasLeft()) {
+                        p.setRight(found.me.getLeft());
+                    } else {
+                        p.setLeft(found.me.getRight());
+                    }
+                }
+            }
+            else{
+                if(found.hasLeft()) root = found.me.getLeft();
+                else root = found.me.getRight();
+            }
+
+        }
+        else{
+            TreeNode deletee = found.me;
+            TreeNode firstLeft = deletee.getLeft();
+            System.out.println("3");
+            boolean foundit = false;
+            while(!foundit && firstLeft != null){
+                if(firstLeft.hasRight()) firstLeft = firstLeft.getRight();
+                else foundit = true;
+            }
+            TreeNode temp = firstLeft;
+            firstLeft.setData(null);
+            found.me.setData(temp.getData());
+        }
+
+    }
+    public void insert(People p){//helper method
+        //System.out.println("Here" + p);
+        if(isEmpty()) root = new TreeNode(p);
+        else{
+            insert(p, this.root);
         }
     }
-    public void insert(int n) { //helper method
-        if(isEmpty()) root = new TreeNode(n);
-        else{
-            insert(n, this.root);
-        }
-    }
-    private void insert(int n, TreeNode t){
-        if(n < t.getData()){
-            if(t.hasLeft()) insert(n, t.getLeft());
-            else t.setLeft(new TreeNode(n));
+    private void insert(People p, TreeNode t){
+        //System.out.println(p.getName());
+        if(p.getName().compareTo(t.getData().getName()) < 0){
+            if(t.hasLeft()) insert(p, t.getLeft());
+            else t.setLeft(new TreeNode(p));
         }
         else{
-            if(t.hasRight()) insert(n, t.getRight());
-            else t.setRight(new TreeNode(n));
+            if(t.hasRight()) insert(p, t.getRight());
+            else t.setRight(new TreeNode(p));
 
         }
     }
@@ -56,7 +109,7 @@ public class BST {
         if(! isEmpty())temp += LRoutput(root);//helper method
         return temp;
     }
-    public String LRoutput(TreeNode t){
+    public String LRoutput(TreeNode t){ //helper
         String temp = "";
         if(t.hasLeft()) temp += LRoutput(t.getLeft());
         temp += t.getData() + ", ";
@@ -69,13 +122,13 @@ public class BST {
 
         public TreeIterator(TreeNode t){this.me = t;}
 
-        public int getData(){
-            if(me != null) return me.getData();
-            return -911;
+        public People getData(){
+            return me.getData();
         }
         public void goLeft(){if(me != null) me = me.getLeft();}
         public void goRight(){if(me != null) me = me.getRight();}
         public void goUp(){if(me != null && me != root) me = me.getParent();}
+        public void setData(People p){ me.setData(p);}
         public boolean hasLeft(){return me.hasLeft();}
         public boolean hasRight(){return me.hasRight();}
         public boolean isLeaf(){return !hasLeft() && !hasRight();}
@@ -85,6 +138,9 @@ public class BST {
             return 1;
         }
         public boolean isRoot(){return me == root;}
+        public String toString(){
+            return "" + me.getData();
+        }
     }
 
 
